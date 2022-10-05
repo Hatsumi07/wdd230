@@ -1,0 +1,51 @@
+header {
+    background-color: cadetblue;
+    text-align: center;
+    width: auto;
+    margin-bottom: 8%;
+}
+body{
+    font-family: 'PT Sans', sans-serif;
+}
+h1 {
+    font-size: 1.5rem;
+    margin: 0;
+    padding: 1rem 0;
+}
+h2 {
+    font-size: 1.5rem;
+}
+h3 {
+    font-size: 1rem;
+}
+header p {
+    font-size: 1rem;
+    margin: 0;
+    padding: 1rem 0;
+}
+main {
+    display: grid;
+    row-gap: 2rem;
+}
+main div {
+    width: auto;
+    background-color: aliceblue;
+    justify-content: center;
+    text-align: center;
+}
+main div a {
+    display: block;
+}
+main div img {
+    width: 100%;
+}
+main div p {
+    text-align: justify;
+    font-size: 1rem;
+    padding: 0 5%;
+}
+footer {
+    background-color: cadetblue;
+    text-align: center;
+    padding: 1% 0;
+}

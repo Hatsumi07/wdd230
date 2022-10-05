@@ -1,0 +1,36 @@
+@media only screen and (min-width: 400px) {
+    h1 {
+        font-size: 2rem;
+    }
+    h2{
+        font-size: 1.6rem;
+    }
+    h3 {
+        font-size: 1.1rem;
+    }
+    header p {
+        font-size: 1.5rem;
+    }
+    main {
+        margin: 0 3%;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+    }
+    main div {
+        background-color: aliceblue;
+        border: 2px solid rgb(212, 231, 248);
+    }
+    main div a {
+        display: block;
+    }
+    main div img {
+        width: 100%;
+    }
+    main div p {
+        font-size: 1.1rem;
+    }
+    footer {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
