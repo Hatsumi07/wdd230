@@ -1,0 +1,45 @@
+@media only screen and (min-width: 500px) {
+    :root {
+        --firstColor: #006D77;
+        --secondColor: #83C5BE;
+        --thirdColor: #EDF6F9;
+    }
+    h1, h2, h3, h4, h5, h6 {
+        font-family: 'Averia Serif Libre', cursive;
+    }
+    p, a {
+        font-family: 'Quicksand', sans-serif;
+    }
+    header {
+        background-color: var(--firstColor);
+        text-align: center;
+    }
+    header nav {
+        background-color: var(--firstColor);
+    }
+    header img {
+        width: auto;
+    }
+    header h1 {
+        margin: 0;
+        font-size: 200%;
+    }
+    a {
+        text-decoration: none;
+    }
+    a:hover {
+        color: var(--secondColor);
+    }
+    nav ul li {
+        padding: 2% 5%;
+    }
+    nav ul {
+        flex-direction: row;
+    }
+    nav a {
+        color: var(--thirdColor);
+    }
+    #color_palette {
+        width: 50%;
+    }
+}

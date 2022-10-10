@@ -1,0 +1,61 @@
+:root {
+    --firstColor: #006D77;
+    --secondColor: #83C5BE;
+    --thirdColor: #EDF6F9;
+  }
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Averia Serif Libre', cursive;
+}
+p, a {
+    font-family: 'Quicksand', sans-serif;
+}
+header {
+    width: 100%;
+    background-color: var(--firstColor);
+    text-align: center;
+}
+header nav {
+    background-color: white;
+}
+header a img {
+    width: 10rem;
+}
+header h1 {
+    margin: 0;
+    font-size: 150%;
+}
+a {
+    text-decoration: none;
+}
+a:hover {
+    color: var(--secondColor);
+}
+nav ul li {
+    list-style-type: none;
+    padding: 0.5rem 0;
+}
+nav ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+nav a {
+    color: var(--firstColor);
+}
+#color_palette {
+    width: 100%;
+}
+header img {
+    width: 1rem;
+}
+#typo_heading {
+    font-family: 'Averia Serif Libre', cursive;
+    font-weight: bold;
+    list-style-type: disc;
+}
+#typo_paragraph {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bold;
+    list-style-type: disc;
+}
