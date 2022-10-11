@@ -39,7 +39,16 @@
     nav a {
         color: var(--thirdColor);
     }
-    #color_palette {
-        width: 50%;
+    main {
+        width: 70%;
+        margin: 0 auto;
+        padding: 0;
+    }
+    footer {
+        flex-direction: row;
+        padding: 2rem 1rem;
+    }
+    footer p {
+        margin: 0 2rem;
     }
 }

@@ -22,6 +22,7 @@ header a img {
 }
 header h1 {
     margin: 0;
+    margin-bottom: 1rem;
     font-size: 150%;
 }
 a {
@@ -58,4 +59,18 @@ header img {
     font-family: 'Quicksand', sans-serif;
     font-weight: bold;
     list-style-type: disc;
+}
+body{
+    align-items: center;
+}
+main {
+    margin: 0;
+    padding: 0 3%;
+}
+footer {
+    background-color: var(--firstColor);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--thirdColor);
 }
