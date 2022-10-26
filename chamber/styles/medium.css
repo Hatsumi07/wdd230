@@ -1,0 +1,45 @@
+@media only screen and (min-width: 800px) {
+
+    .content {
+        display: grid;
+        grid-template-columns: 60% 40%;
+        gap: 1rem;
+        justify-content: center;
+        padding: 2rem;
+    }
+    .content div {
+        grid-column: 1/-1;
+    }
+
+    .content .join {
+        display: block;
+    }
+    .content .event {
+        grid-row: 6/7;
+        grid-column: 1/2;
+    }
+    .content .weather {
+        grid-row: 6/7;
+        grid-column: 2/3;
+    }
+    
+    .spotlights {
+        flex-direction: row;
+        grid-row: 3/4;
+    }
+    
+    footer {
+        font-size: 1.2rem;
+    }
+    #footer_bottom {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    #footer_bottom > * {
+        flex: 1 1 auto;
+    }
+    #footer_bottom p:nth-child(2),
+    #footer_bottom p:nth-child(3) {
+        border-left: 2px solid white;
+    }
+}

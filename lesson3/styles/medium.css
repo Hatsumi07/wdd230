@@ -27,17 +27,21 @@
     a {
         text-decoration: none;
     }
-    a:hover {
+    nav a:hover {
         color: var(--secondColor);
+        background-color: #EDF6F9;
     }
     nav ul li {
         padding: 2% 5%;
+        display: block;
     }
     nav ul {
         flex-direction: row;
+        width: 100%;
     }
     nav a {
         color: var(--thirdColor);
+        display: block;
     }
     main {
         width: 70%;
