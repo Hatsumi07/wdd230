@@ -19,3 +19,21 @@ function toggleMenu() {
 
 const menuBtn = document.querySelector(".menu button");
 menuBtn.onclick = toggleMenu;
+
+const meetingDiv = document.querySelector(".meeting");
+function popReminder () {
+	meetingDiv.style.display = "none";
+}
+
+function meetingReminder () {
+	const day = now.getDay();
+	console.log(day);
+	if (day == 1) {
+		meetingDiv.style.display = "block";
+	} else if (day == 2) {
+		meetingDiv.style.display = "block";
+	} else {
+		meetingDiv.style.display = "none";
+	}
+}
+document.onload

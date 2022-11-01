@@ -21,6 +21,9 @@ header .presentation {
     align-items: center;
     width: 100%;
 }
+.presentation > * {
+    justify-content: center;
+}
 header nav.small_screen {
     display: block;
     width: 100%;
@@ -34,6 +37,7 @@ header nav.small_screen {
     border: none;
     font-size: 2rem;
     background: transparent;
+    color: var(--firstColor);
     padding: 0;
     font-family: sans-serif;
 }
@@ -75,11 +79,11 @@ header nav ul.open {
     align-items: center;
 }
 .logo img {
-    width: 10rem;
+    width: 5rem;
     flex: 1 1 auto;
 }
 .logo h1 {
-    font-size: 1.3rem;
+    font-size: 1rem;
     flex: 1 1 auto;
 }
 .social {
@@ -102,27 +106,153 @@ header nav ul.open {
     margin-top: 1.5rem;
     font-family: "quicksand", sans-serif ;
 }
+
+/*-------------------------------- main section --------------------------------------------------*/
+.meeting {
+    text-align: center;
+    background-color: var(--thirdColor);
+    font-size: 1.3rem;
+    font-family: 'quicksand', sans-serif;
+    padding: 0.5rem 2rem;
+    position: relative;
+}
+.meeting button {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-weight: bold;
+    background: transparent;
+    color: var(--firstColor);
+    padding: 0;
+}
+button {
+    background-color: var(--secondColor);
+    color: var(--thirdColor);
+    padding: 1rem;
+    font-family: 'quicksand', sans-serif;
+    border: none;
+    font-weight: bold;
+}
 .content {
     display: flex;
     flex-direction: column;
     row-gap: 2rem;
 }
-.content div {
-    background-color: var(--thirdColor);
-    border: 1px solid black;
-    padding: 1.5rem;
-}
 .content .join {
     display: none;
+    padding: 1rem;
+}
+.content .hero {
+    padding: 0;
+    position: relative;
+}
+.content #hero_title {
+    padding: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.3);
+    border: none;
+}
+.content .hero h2 {
+    position: absolute;
+    margin: 2rem;
+    color: white;
+    font-size: 3rem;
+}
+.content .hero #hero_large_view {
+    display: none;
+}
+.content .hero #hero_base_view {
+    width: 100%;
+    height: 100%;
+}
+.content .hero button {
+    position: absolute;
+    right: 2rem;
+    bottom: 2rem;
+    box-shadow: 5px 5px 5px black;
+    font-size: 1.3rem;
+}
+.content .event {
+    background: radial-gradient(rgb(255, 98, 0), rgb(255, 77, 0), rgb(255, 51, 0));
+    color: rgb(255, 236, 92);
+    font-family: 'quicksand', sans-serif;
+    font-size: 1.3rem;
+    padding: 1rem;
+}
+.content .weather {
+    background-color: rgba(131, 197, 190, 0.25);
+    font-family: 'quicksand', sans-serif;
+    text-align: center;
+    padding: 1rem;
+}
+.content .event h2 {
+    font-family: 'quicksand', sans-serif;
+}
+.content .weather img {
+    width: 10rem;
+}
+.content .weather div {
+    border: none;
+    align-items: center;
+    justify-content: center;
+}
+.weather .time {
+    display: flex;
+    flex: 1 1 auto;
+}
+.content .weather .wind {
+    flex: 1 1 auto;
+    flex-direction: column;
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+}
+.content .weather .wind div {
+    display: flex;
+    flex: 1 1 auto;
+    gap: 2rem;
+    padding: 0;
+    font-size: 1rem;
+}
+.content .news {
+    text-align: center;
+    font-family: 'quicksand', sans-serif;
+    background-color: rgba(131, 197, 190, 0.25);
+    font-family: 'quicksand', sans-serif;
+    padding: 1rem;
+}
+.content .join {
+    background-color: rgba(131, 197, 190, 0.25);
+    text-align: center;
+    font-family: 'quicksand', sans-serif;
+    padding: 1rem;
 }
 .spotlights {
     display: flex;
+    flex: 1 1 auto;
     flex-direction: column;
+    gap: 2rem;
+    background-color: white;
+    text-align: center;
+    font-family: 'quicksand', sans-serif;
+}
+.spotlights div { 
+    background-color: var(--secondColor);
+    flex: 1 1 auto;
+    box-shadow: 5px 5px 8px black;
+    padding: 1rem;
+}
+.spotlights img {
+    width: 10rem;
 }
 
 .spotlights .third {display: none;}
 
 footer {
+    width: 100%;
     padding-bottom: 1rem;
     background-color: var(--firstColor);
     text-align: center;

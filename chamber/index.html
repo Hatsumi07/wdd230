@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Comas Chamber of Commerce Home Page Build</title>
+    <link rel="icon" type="image/x-icon" href="images/comas_chamber_logo.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,300;1,300&family=Quicksand&display=swap" rel="stylesheet">
@@ -12,7 +13,7 @@
     <link rel="stylesheet" href="styles/medium.css">
     <link rel="stylesheet" href="styles/large.css">
 </head>
-<body>
+<body onload="meetingReminder()">
     <header>
         <div class="presentation">
             <div class="logo">
@@ -46,63 +47,90 @@
         <div class="date"></div>
     </header>
     <main>
+        <div class="meeting">
+            <p>
+                🤝🏼 Come join us for the chamber meet and greet Wednesday at 7:00 p.m.
+            </p>
+            <button onclick="popReminder()">X</button>
+        </div>
         <div class="content">
             <div class="hero">
-                <h2>Hero with site name and call to action</h2>
-                <p>Lorem ipsum dolor sit amet. In tenetur sapiente nam esse veniam ut quibusdam amet ut sint ullam qui facere repellat. Et laborum consectetur ut deserunt odit et ipsa mollitia ut expedita repudiandae aut delectus alias in eius perferendis. Eum fuga ratione ea doloremque eligendi vel esse nostrum qui reprehenderit.
-
-                    Nam incidunt maiores qui sapiente laborum quo possimus doloremque est galisum blanditiis ut excepturi alias qui obcaecati optio et quae deleniti. Est libero culpa 33 quisquam incidunt est dicta deleniti cum nesciunt consectetur qui nisi asperiores aut fugit tenetur. Qui reprehenderit eaque aut omnis amet qui deleniti culpa ut quae excepturi.
-                </p>
+                <div id="hero_title">
+                    <h2>Welcome to Comas!</h2>
+                </div>
+                <img id="hero_base_view" src="images/comas_chamber_of_commerce_hero_image.jpg">
+                <img id="hero_large_view" src="images/comas_chamber_of_commerce_hero_image_large_view.jpg">
+                <button>Join Chamber</button>
             </div>
             <div class="event">
-                <h2>Event</h2>
-                <p>Lorem ipsum dolor sit amet. In tenetur sapiente nam esse veniam ut quibusdam amet ut sint ullam qui facere repellat. Et laborum consectetur ut deserunt odit et ipsa mollitia ut expedita repudiandae aut delectus alias in eius perferendis. Eum fuga ratione ea doloremque eligendi vel esse nostrum qui reprehenderit.
-
-                    Nam incidunt maiores qui sapiente laborum quo possimus doloremque est galisum blanditiis ut excepturi alias qui obcaecati optio et quae deleniti. Est libero culpa 33 quisquam incidunt est dicta deleniti cum nesciunt consectetur qui nisi asperiores aut fugit tenetur. Qui reprehenderit eaque aut omnis amet qui deleniti culpa ut quae excepturi.
-                </p>
+                <h2>Grand Opening!</h2>
+                <strong><span style="font-size: 2rem;">&#128525;</span> Mallplaza has come to Comas!</strong> 
+                <p>Join us in the grand opening this saturday 1:00 pm</p>
             </div>
             <div class="weather">
                 <h2>Weather</h2>
-                <p>Lorem ipsum dolor sit amet. In tenetur sapiente nam esse veniam ut quibusdam amet ut sint ullam qui facere repellat. Et laborum consectetur ut deserunt odit et ipsa mollitia ut expedita repudiandae aut delectus alias in eius perferendis. Eum fuga ratione ea doloremque eligendi vel esse nostrum qui reprehenderit.
-
-                    Nam incidunt maiores qui sapiente laborum quo possimus doloremque est galisum blanditiis ut excepturi alias qui obcaecati optio et quae deleniti. Est libero culpa 33 quisquam incidunt est dicta deleniti cum nesciunt consectetur qui nisi asperiores aut fugit tenetur. Qui reprehenderit eaque aut omnis amet qui deleniti culpa ut quae excepturi.
-                </p>
+                <div class="time">
+                    <img src="images/weather_icon.png">
+                    <div> 
+                        <span style="font-size: 2rem;">21°C</span><br>
+                        <span>Cloudy</span>
+                    </div>
+                </div>
+                <hr>
+                <div class="wind">
+                    <div id="speed">
+                        <h3>Wind Speed:</h3>
+                        <p>14 km/h</p>
+                    </div>
+                    <div id="chill">
+                        <h3>Wind Chill:</h3>
+                        <p>N/A</p>
+                    </div>
+                </div>
             </div>
             <div class="news">
                 <h2>New release</h2>
                 <p>Lorem ipsum dolor sit amet. In tenetur sapiente nam esse veniam ut quibusdam amet ut sint ullam qui facere repellat. Et laborum consectetur ut deserunt odit et ipsa mollitia ut expedita repudiandae aut delectus alias in eius perferendis. Eum fuga ratione ea doloremque eligendi vel esse nostrum qui reprehenderit.
-
-                    Nam incidunt maiores qui sapiente laborum quo possimus doloremque est galisum blanditiis ut excepturi alias qui obcaecati optio et quae deleniti. Est libero culpa 33 quisquam incidunt est dicta deleniti cum nesciunt consectetur qui nisi asperiores aut fugit tenetur. Qui reprehenderit eaque aut omnis amet qui deleniti culpa ut quae excepturi.
                 </p>
+                <a href="#"> Learn More</a>
             </div>
             <div class="join">
-                <h2>Join</h2>
-                <p>Lorem ipsum dolor sit amet. In tenetur sapiente nam esse veniam ut quibusdam amet ut sint ullam qui facere repellat. Et laborum consectetur ut deserunt odit et ipsa mollitia ut expedita repudiandae aut delectus alias in eius perferendis. Eum fuga ratione ea doloremque eligendi vel esse nostrum qui reprehenderit.
-
-                    Nam incidunt maiores qui sapiente laborum quo possimus doloremque est galisum blanditiis ut excepturi alias qui obcaecati optio et quae deleniti. Est libero culpa 33 quisquam incidunt est dicta deleniti cum nesciunt consectetur qui nisi asperiores aut fugit tenetur. Qui reprehenderit eaque aut omnis amet qui deleniti culpa ut quae excepturi.
-                </p>
+                <button>Join Us!</button>
+                <p>Discover how to join the chamber of commerce and learn the benefits from joining!</p>
             </div>
             <div class="spotlights">
                 <div class="first">
-                    <h2>Spotlight 1</h2>
-                    <p>Lorem ipsum dolor sit amet. In tenetur sapiente nam esse veniam ut quibusdam amet ut sint ullam qui facere repellat. Et laborum consectetur ut deserunt odit et ipsa mollitia ut expedita repudiandae aut delectus alias in eius perferendis. Eum fuga ratione ea doloremque eligendi vel esse nostrum qui reprehenderit.
-
-                        Nam incidunt maiores qui sapiente laborum quo possimus doloremque est galisum blanditiis ut excepturi alias qui obcaecati optio et quae deleniti. Est libero culpa 33 quisquam incidunt est dicta deleniti cum nesciunt consectetur qui nisi asperiores aut fugit tenetur. Qui reprehenderit eaque aut omnis amet qui deleniti culpa ut quae excepturi.
-                    </p>
+                    <h2>Thankful Transport</h2>
+                    <img src="images/moving_truck.png">
+                    <p>"Safe transportation"</p>
+                    <hr>
+                    <address>
+                        contact@thanfultransport.com<br>
+                        +999-999-999<br>
+                        <a href="#">safetransport.com</a>
+                    </address>
                 </div>
                 <div class="second">
-                    <h2>Spotlight 2</h2>
-                    <p>Lorem ipsum dolor sit amet. In tenetur sapiente nam esse veniam ut quibusdam amet ut sint ullam qui facere repellat. Et laborum consectetur ut deserunt odit et ipsa mollitia ut expedita repudiandae aut delectus alias in eius perferendis. Eum fuga ratione ea doloremque eligendi vel esse nostrum qui reprehenderit.
-
-                        Nam incidunt maiores qui sapiente laborum quo possimus doloremque est galisum blanditiis ut excepturi alias qui obcaecati optio et quae deleniti. Est libero culpa 33 quisquam incidunt est dicta deleniti cum nesciunt consectetur qui nisi asperiores aut fugit tenetur. Qui reprehenderit eaque aut omnis amet qui deleniti culpa ut quae excepturi.
-                    </p>
+                    <h2>Tree Planting Campaign</h2>
+                    <img src="images/tree_planting_campaign.png">
+                    <p>Join our environmental care team</p>
+                    <hr>
+                    <address>
+                        hello@environmentalcareteam.com<br>
+                        +999-999-999<br>
+                        <a href="#">greencities.com</a>
+                    </address>
                 </div>
                 <div class="third">
-                    <h2>Spotlight 3</h2>
-                    <p>Lorem ipsum dolor sit amet. In tenetur sapiente nam esse veniam ut quibusdam amet ut sint ullam qui facere repellat. Et laborum consectetur ut deserunt odit et ipsa mollitia ut expedita repudiandae aut delectus alias in eius perferendis. Eum fuga ratione ea doloremque eligendi vel esse nostrum qui reprehenderit.
-
-                        Nam incidunt maiores qui sapiente laborum quo possimus doloremque est galisum blanditiis ut excepturi alias qui obcaecati optio et quae deleniti. Est libero culpa 33 quisquam incidunt est dicta deleniti cum nesciunt consectetur qui nisi asperiores aut fugit tenetur. Qui reprehenderit eaque aut omnis amet qui deleniti culpa ut quae excepturi.
-                    </p>
+                    <h2>I Share a Book</h2>
+                    <img src="images/share_book.png">
+                    <p>Share your favorite books with others.</p>
+                    <hr>
+                    <address>
+                        join@ishareabook.com<br>
+                        +999-999-999<br>
+                        <a href="#">comasreads.com</a>
+                    </address>
                 </div>
             </div>
         </div>
