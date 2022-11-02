@@ -28,7 +28,10 @@ main {
 	width: 95%;
 }
 
-input,
+#inputError {
+  color: red;
+  display: none;
+}
 button {
 	padding: 0.4rem;
 	margin-left: 1rem;
