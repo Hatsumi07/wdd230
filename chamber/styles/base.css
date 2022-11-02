@@ -127,7 +127,7 @@ header nav ul.open {
 }
 button {
     background-color: var(--secondColor);
-    color: var(--thirdColor);
+    color: black;
     padding: 1rem;
     font-family: 'quicksand', sans-serif;
     border: none;
@@ -176,8 +176,8 @@ button {
     font-size: 1.3rem;
 }
 .content .event {
-    background: radial-gradient(rgb(255, 98, 0), rgb(255, 77, 0), rgb(255, 51, 0));
-    color: rgb(255, 236, 92);
+    background: rgb(255, 236, 92);
+    color: black;
     font-family: 'quicksand', sans-serif;
     font-size: 1.3rem;
     padding: 1rem;

@@ -28,12 +28,9 @@ function popReminder () {
 function meetingReminder () {
 	const day = now.getDay();
 	console.log(day);
-	if (day == 1) {
-		meetingDiv.style.display = "block";
-	} else if (day == 2) {
+	if ((day == 1) || (day == 2)) {
 		meetingDiv.style.display = "block";
 	} else {
 		meetingDiv.style.display = "none";
 	}
 }
-document.onload
