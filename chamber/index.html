@@ -13,11 +13,17 @@
     <link rel="stylesheet" href="styles/medium.css">
     <link rel="stylesheet" href="styles/large.css">
 </head>
-<body onload="meetingReminder()">
+<body onload="meetingReminder(); getWindChill()">
+    <div class="meeting">
+        <p>
+            🤝🏼 Come join us for the chamber meet and greet Wednesday at 7:00 p.m.
+        </p>
+        <button onclick="popReminder()">X</button>
+    </div>
     <header>
         <div class="presentation">
             <div class="logo">
-                <img alt="logo of the site" src="images/comas_chamber_logo.png">
+                <img alt="logo of the site" src="images/comas_chamber_logo.webp">
                 <h1>Comas<br>Chamber of Commerce</h1>
             </div>
             <nav class="large_screen">
@@ -29,8 +35,8 @@
                 </ul>
             </nav>
             <div class="social">
-                <a href="https://www.facebook.com/"><img alt="facebook icon" src="images/Facebook_Logo.png"></a>
-                <a href="https://www.linkedin.com/"><img alt="linkedin icon" src="images/Linkedin_Logo.png"></a>
+                <a href="https://www.facebook.com/"><img alt="facebook icon" src="images/Facebook_Logo.webp"></a>
+                <a href="https://www.linkedin.com/"><img alt="linkedin icon" src="images/Linkedin_Logo.webp"></a>
             </div>
             <div class="menu">
                 <button><span>&#9776;</span><span>X</span></button>
@@ -47,32 +53,32 @@
         <div class="date"></div>
     </header>
     <main>
-        <div class="meeting">
-            <p>
-                🤝🏼 Come join us for the chamber meet and greet Wednesday at 7:00 p.m.
-            </p>
-            <button onclick="popReminder()">X</button>
-        </div>
         <div class="content">
             <div class="hero">
                 <div id="hero_title">
                     <h2>Welcome to Comas!</h2>
                 </div>
-                <img alt="parque de Comas" id="hero_base_view" src="images/comas_chamber_of_commerce_hero_image.jpg">
-                <img alt="parque de Comas"id="hero_large_view" src="images/comas_chamber_of_commerce_hero_image_large_view.jpg">
+                <img src="images/wdd230-org-medium.jpg" alt="People gathered in a business meeting" 
+                srcset="images/wdd230-org-500.webp 500w,
+                        images/wdd230-org-1000.webp 1000w,
+                        images/wdd230-org-1500.webp 1500w"
+                        sizes="(min-width: 1000px) 100vw"
+                >
+                <!--<img alt="parque de Comas" id="hero_base_view" src="images/comas_chamber_of_commerce_hero_image.jpg">
+                <img alt="parque de Comas"id="hero_large_view" src="images/comas_chamber_of_commerce_hero_image_large_view.jpg">-->
                 <button>Join Chamber</button>
             </div>
             <div class="event">
                 <h2>Grand Opening!</h2>
                 <strong><span style="font-size: 2rem;">&#128525;</span> Mallplaza has come to Comas!</strong> 
-                <p>Join us in the grand opening this saturday 1:00 pm</p>
+                <p style="color: rgb(255, 255, 255); font-size: 1rem;">Join us in the grand opening this saturday 1:00 pm</p>
             </div>
             <div class="weather">
                 <h2>Weather</h2>
                 <div class="time">
-                    <img alt="vector image of cloudy weather" src="images/weather_icon.png">
+                    <img alt="vector image of cloudy weather" src="images/weather_icon.webp">
                     <div> 
-                        <span style="font-size: 2rem;">21°C</span><br>
+                        <p><span id="temperature" style="font-size: 2rem;">9</span>°C</p><br>
                         <span>Cloudy</span>
                     </div>
                 </div>
@@ -80,11 +86,11 @@
                 <div class="wind">
                     <div id="speed">
                         <h3>Wind Speed:</h3>
-                        <p>14 km/h</p>
+                        <p><span id="windSpeed">14</span>km/h</p>
                     </div>
                     <div id="chill">
                         <h3>Wind Chill:</h3>
-                        <p>N/A</p>
+                        <p><span id="windChill">N/A</span>°F</p>
                     </div>
                 </div>
             </div>
@@ -98,10 +104,10 @@
                 <button>Join Us!</button>
                 <p>Discover how to join the chamber of commerce and learn the benefits from joining!</p>
             </div>
-            <div class="spotlights">
+            <div style="background-color: white;" class="spotlights">
                 <div class="first">
                     <h2>Thankful Transport</h2>
-                    <img alt="vector image of a moving truck" src="images/moving_truck.png">
+                    <img alt="vector image of a moving truck" src="images/moving_truck.webp">
                     <p>"Safe transportation"</p>
                     <hr>
                     <address>
@@ -112,7 +118,7 @@
                 </div>
                 <div class="second">
                     <h2>Tree Planting Campaign</h2>
-                    <img alt="vector image of a hands holding a tree sprout" src="images/tree_planting_campaign.png">
+                    <img alt="vector image of a hands holding a tree sprout" src="images/tree_planting_campaign.webp">
                     <p>Join our environmental care team</p>
                     <hr>
                     <address>
@@ -123,7 +129,7 @@
                 </div>
                 <div class="third">
                     <h2>I Share a Book</h2>
-                    <img alt="vector image of a stack of books" src="images/share_book.png">
+                    <img alt="vector image of a stack of books" src="images/share_book.webp">
                     <p>Share your favorite books with others.</p>
                     <hr>
                     <address>
@@ -137,7 +143,7 @@
     </main>
     <footer>
         <div id="footer_logo">
-            <img alt="logo of the site" src="images/comas_chamber_logo.png">
+            <img alt="logo of the site" src="images/comas_chamber_logo.webp">
             <h3>Comas Chamber of Commerce</h3>
         </div>
         <div>
@@ -157,5 +163,6 @@
         </div>
     </footer>
     <script src="scripts/main.js"></script>
+    <script src="scripts/windchill.js"></script>
 </body>
 </html>

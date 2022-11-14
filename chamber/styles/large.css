@@ -1,9 +1,4 @@
 @media only screen and (min-width: 1000px) {
-    :root {
-        --firstColor: #006D77;
-        --secondColor: #83C5BE;
-        --thirdColor: #EDF6F9;
-    }
     .spotlights {
         flex-direction: column;
     }
@@ -19,7 +14,7 @@
         display: none;
     }
     .content {
-        grid-template-columns: 1fr 50% 1fr;
+        grid-template-columns: 1fr auto 1fr;
         grid-template-rows: 1fr 1fr 1fr;
         padding: 2rem;
         margin: 0 auto;
@@ -107,7 +102,7 @@
         border: none;
     }
     #footer_bottom p:nth-child(4) {
-        border-left: 2px solid white;
+        border-left: 2px solid black;
     }
     /*----------------------------------------------*/
 }

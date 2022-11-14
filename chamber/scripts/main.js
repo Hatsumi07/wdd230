@@ -21,11 +21,13 @@ const menuBtn = document.querySelector(".menu button");
 menuBtn.onclick = toggleMenu;
 
 const meetingDiv = document.querySelector(".meeting");
+
 function popReminder () {
 	meetingDiv.style.display = "none";
 }
 
 function meetingReminder () {
+	meetingDiv.style.top = "0px";
 	const day = now.getDay();
 	console.log(day);
 	if ((day == 1) || (day == 2)) {

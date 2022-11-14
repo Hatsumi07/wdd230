@@ -1,4 +1,10 @@
 @media only screen and (min-width: 800px) {
+    .meeting {
+        text-align: center;
+        font-size: 1.3rem;
+        padding: 0.5rem 2rem;
+    }
+    .date {font-size: 1.3rem;}
     .content {
         display: grid;
         grid-template-columns: 60% 40%;
@@ -47,6 +53,6 @@
     }
     #footer_bottom p:nth-child(2),
     #footer_bottom p:nth-child(3) {
-        border-left: 2px solid white;
+        border-left: 2px solid black;
     }
 }

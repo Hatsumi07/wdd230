@@ -1,11 +1,37 @@
 /*Fonts: Averia Serif Libre(cursive) and Quicksand(sans-serif)*/
 :root {
-    --firstColor: #006D77;
-    --secondColor: #83C5BE;
-    --thirdColor: #EDF6F9;
+    --firstColor: #2EC4B6;
+    --secondColor: #CBF3F0;
+    --thirdColor: #FFFFFF;
+    --fourthColor: #FFBF69;
+    --fifthColor: #FF9F1C;
 }
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Averia Serif Libre', cursive;
+}
+body {
+    position: relative;
+}
+.meeting {
+    position: absolute;
+    top: -85px;
+    text-align: center;
+    background-color: var(--firstColor);
+    font-size: 0.9rem;
+    font-family: 'quicksand', sans-serif;
+    padding: 0.5rem 2rem;
+    position: relative;
+    transition: top 3s;
+}
+.meeting button {
+    font-size: 1.3rem;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-weight: bold;
+    background: transparent;
+    color: black;
+    padding: 0;
 }
 header {
     display: flex;
@@ -37,7 +63,7 @@ header nav.small_screen {
     border: none;
     font-size: 2rem;
     background: transparent;
-    color: var(--firstColor);
+    color: black;
     padding: 0;
     font-family: sans-serif;
 }
@@ -61,14 +87,13 @@ header nav ul.open {
     display: block;
 }
 #navigation li a {
+    text-align: center;
     font-family: "quicksand", sans-serif;
     text-decoration: none;
     color: black;
     display: block;
     padding: 1rem 0;
     padding-left: 1rem;
-    border-bottom: 1px solid black;
-    border-top: 1px solid black;
 }
 #navigation li a:hover {
     background-color: var(--firstColor);
@@ -98,33 +123,16 @@ header nav ul.open {
     width: 2em;
 }
 .date {
-    background-color: var(--firstColor);
-    color: white;
+    color:#000000;
+    font-size: 0.5;
+    font-weight: bolder;
     display: block;
     text-align: center;
-    padding: 1rem 5rem;
-    margin-top: 1.5rem;
     font-family: "quicksand", sans-serif ;
 }
 
 /*-------------------------------- main section --------------------------------------------------*/
-.meeting {
-    text-align: center;
-    background-color: var(--thirdColor);
-    font-size: 1.3rem;
-    font-family: 'quicksand', sans-serif;
-    padding: 0.5rem 2rem;
-    position: relative;
-}
-.meeting button {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    font-weight: bold;
-    background: transparent;
-    color: var(--firstColor);
-    padding: 0;
-}
+
 button {
     background-color: var(--secondColor);
     color: black;
@@ -138,6 +146,12 @@ button {
     flex-direction: column;
     row-gap: 2rem;
 }
+.content a {
+    color: #000000;
+   margin: 3rem 0;
+    font-family: 'quicksand', sans-serif;
+}
+
 .content .join {
     display: none;
     padding: 1rem;
@@ -164,29 +178,32 @@ button {
 .content .hero #hero_large_view {
     display: none;
 }
-.content .hero #hero_base_view {
+.content .hero img {
     width: 100%;
     height: 100%;
 }
 .content .hero button {
+    background-color: var(--fourthColor);
+    color: black;
     position: absolute;
     right: 2rem;
     bottom: 2rem;
-    box-shadow: 5px 5px 5px black;
     font-size: 1.3rem;
 }
 .content .event {
-    background: rgb(255, 236, 92);
-    color: black;
+    background: linear-gradient(45deg, blueviolet, crimson);
+    color: white;
+    border: 1px black ;
     font-family: 'quicksand', sans-serif;
     font-size: 1.3rem;
     padding: 1rem;
+    text-align: center;
 }
 .content .weather {
-    background-color: rgba(131, 197, 190, 0.25);
     font-family: 'quicksand', sans-serif;
     text-align: center;
     padding: 1rem;
+    background-color: none;
 }
 .content .event h2 {
     font-family: 'quicksand', sans-serif;
@@ -220,12 +237,10 @@ button {
 .content .news {
     text-align: center;
     font-family: 'quicksand', sans-serif;
-    background-color: rgba(131, 197, 190, 0.25);
     font-family: 'quicksand', sans-serif;
     padding: 1rem;
 }
 .content .join {
-    background-color: rgba(131, 197, 190, 0.25);
     text-align: center;
     font-family: 'quicksand', sans-serif;
     padding: 1rem;
@@ -235,12 +250,12 @@ button {
     flex: 1 1 auto;
     flex-direction: column;
     gap: 2rem;
-    background-color: white;
     text-align: center;
     font-family: 'quicksand', sans-serif;
+    margin-bottom: 2rem;
 }
 .spotlights div { 
-    background-color: var(--secondColor);
+    background-color: var(--fourthColor);
     flex: 1 1 auto;
     box-shadow: 5px 5px 8px black;
     padding: 1rem;
@@ -256,7 +271,7 @@ footer {
     padding-bottom: 1rem;
     background-color: var(--firstColor);
     text-align: center;
-    color: white;
+    color: black;
 }
 footer p {
     font-family: 'Quicksand', sans-serif;
