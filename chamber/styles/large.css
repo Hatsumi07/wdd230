@@ -22,6 +22,9 @@
     .content div {
         grid-column: auto;
     }
+    .content .discover_gallery {
+        grid-column: 2/3;
+    }   
     .content .hero {
         grid-column: 2/3;
         grid-row: 1/3;

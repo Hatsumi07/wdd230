@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comas Chamber of Commerce Home Page Build</title>
+    <link rel="icon" type="image/x-icon" href="images/comas_chamber_logo.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,300;1,300&family=Quicksand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/normalize.css"> 
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/medium.css">
+    <link rel="stylesheet" href="styles/large.css">
+</head>
+<body onload="meetingReminder(); getWindChill()">
+    <style>
+        h1 {
+            text-align: center;
+        }
+        .discover img {
+            padding: 0px;
+            margin: 0px;
+            width: 100%;
+        }
+        .discover source {
+            padding: 0px;
+            margin: 0px;
+        }
+        .discover_gallery {
+            position: relative;
+        }
+        .discover_gallery p {
+            color: white;
+            bottom: -1rem;
+            position: absolute;
+            padding: 1rem;
+            background: rgb(0, 0, 0);
+            background: rgba(0, 0, 0, 0.5);
+        }
+        picture > * [data-src] {
+            filter: blur(0.2em);
+        }
+        picture > * {
+            width: 100%;
+            display: block;
+            padding-bottom: 2rem;
+            margin: 0 auto;
+            filter: blur(0em);
+            transition: filter 0.5s;
+        }   
+        .comas_info {
+            min-height: fit-content;
+            grid-column: 1/2;
+            grid-row: 1/2;
+            position: sticky;
+            top: 0;
+            padding: 1rem;
+            background-color: rgb(238, 238, 238);
+        }
+        .comas_info div {
+            margin: 0.8rem;
+            font-family: "quicksand", sans-serif;
+        }
+        .comas_info span {
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+    </style>
+    <div class="meeting">
+        <p>
+            🤝🏼 Come join us for the chamber meet and greet Wednesday at 7:00 p.m.
+        </p>
+        <button onclick="popReminder()">X</button>
+    </div>
+    <header>
+        <div class="presentation">
+            <div class="logo">
+                <a href="index.html"><img alt="logo of the site" src="images/comas_chamber_logo.webp"></a>
+                <a href="index.html" style="text-decoration: none; color: black;"><h1>Comas<br>Chamber of Commerce</h1></a>
+            </div>
+            <nav class="large_screen">
+                <ul id="navigation_large">
+                    <li><a href="discover.html">Discover</a></li>
+                    <li><a href="#">Directory</a></li>
+                    <li><a href="#">Join</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="social">
+                <a href="https://www.facebook.com/"><img alt="facebook icon" src="images/Facebook_Logo.webp"></a>
+                <a href="https://www.linkedin.com/"><img alt="linkedin icon" src="images/Linkedin_Logo.webp"></a>
+            </div>
+            <div class="menu">
+                <button><span>&#9776;</span><span>X</span></button>
+            </div>
+        </div>
+        <nav class="small_screen">
+            <ul id="navigation">
+                <li><a href="#">Discover</a></li>
+                <li><a href="#">Directory</a></li>
+                <li><a href="#">Join</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="date"></div>
+    </header>
+    <main>
+        <div class="content">
+            <div class="discover_gallery">
+                <picture class="discover">
+                    <source srcset="images/placeholder_image.jpg" data-src="images/playas_500.webp" >
+                    <source media="(min-width:800px)" srcset="images/placeholder_image.jpg" data-src="images/playas_1000.webp">
+                    <source media="(min-width:1000px)" srcset="images/placeholder_image.jpg" data-src="images/playas_1500.webp">
+                    <img src="images/placeholder_image.jpg" data-src="images/playas_1000.jpg"/>
+                </picture>
+                <p>Beaches nearby</p>
+            </div>
+            <div class="discover_gallery">
+                <picture class="discover">
+                    <source srcset="images/placeholder_image.jpg" data-src="images/ambulantes_500.webp">
+                    <source media="(min-width:800px)"  srcset="images/placeholder_image.jpg" data-src="images/ambulantes_1000.webp">
+                    <source media="(min-width:1000px)" srcset="images/placeholder_image.jpg" data-src="images/ambulantes_1500.webp">
+                    <img src="images/placeholder_image.jpg" data-src="images/ambulantes_1000.jpg"/>
+                </picture>
+                <p>Support ambulantes</p>
+            </div>
+            <div class="discover_gallery">
+                <picture class="discover">
+                    <source srcset="images/placeholder_image.jpg" data-src="images/cevicherias_500.webp">
+                    <source media="(min-width:800px)" srcset="images/placeholder_image.jpg" data-src="images/cevicherias_1000.webp">
+                    <source media="(min-width:1000px)" srcset="images/placeholder_image.jpg" data-src="images/cevicherias_1500.webp">
+                    <img src="images/placeholder_image.jpg" data-src="images/cevicherias_1000.jpg"/>
+                </picture>
+                <p>Sea food restaurants nearby</p>
+            </div>
+            <div class="discover_gallery">
+                <picture class="discover">
+                    <source srcset="images/placeholder_image.jpg" data-src="images/parque_de_aguas_500.webp">
+                    <source media="(min-width:800px)" srcset="images/placeholder_image.jpg" data-src="images/parque_de_aguas_1000.webp">
+                    <source media="(min-width:1000px)" srcset="images/placeholder_image.jpg" data-src="images/parque_de_aguas_1500.webp">
+                    <img src="images/placeholder_image.jpg" data-src="images/parque_de_aguas_1000.jpg"/>
+                </picture>
+                <p>Visit el parque de las aguas</p>
+            </div>
+            <div class="discover_gallery">
+                <picture class="discover">
+                    <source srcset="images/placeholder_image.jpg" data-src="images/arte_urbano_500.webp">
+                    <source media="(min-width:800px)" srcset="images/placeholder_image.jpg" data-src="images/arte_urbano_1000.webp">
+                    <source media="(min-width:1000px)" srcset="images/placeholder_image.jpg" data-src="images/arte_urbano_1500.webp">
+                    <img src="images/placeholder_image.jpg" data-src="images/arte_urbano_1000.jpg"/>
+                </picture>
+                <p>See urban art</p>
+            </div>
+            <div class="comas_info">
+                <div>
+                    <p><span>Average Monthly Income: </span>1,700.3 soles</p>
+                </div>
+                <div>
+                    <p><span>Population: </span>586 912 hab</p>
+                </div>
+                <div>
+                    <p><span>Major: </span>Raúl Díaz Pérez</p>
+                </div>
+                <div>
+                    <p><span>Zip Code: </span>150110</p>
+                </div>
+                <div>
+                    <p><span>Surface: </span>48,75 km2</p>
+                </div>
+                <div>
+                    <p><span>Elevation: </span>140 m</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div id="footer_logo">
+            <img alt="logo of the site" src="images/comas_chamber_logo.webp">
+            <h3>Comas Chamber of Commerce</h3>
+        </div>
+        <div>
+            <address>
+                Av. Huaynacapac 964, Comas<br>
+                Peru<br>
+                crystalhatsumi07@gmail.com<br>
+                +(51) 967 798 763<br>
+            </address>
+        </div>
+        <hr>
+        <div id="footer_bottom">
+            <p>&copy; 2022 | Crystal Cardenas | BYU-Idaho</p>
+            <p><strong>Crystal Hatsumi Cardenas Godoy</strong></p>
+            <p>WDD 230 Project</p>
+            <p class="lastMdf"></p>
+        </div>
+    </footer>
+    <script src="scripts/main.js"></script>
+    <script src="scripts/windchill.js"></script>
+</body>
+</html>

@@ -3,7 +3,7 @@
     --firstColor: #2EC4B6;
     --secondColor: #CBF3F0;
     --thirdColor: #FFFFFF;
-    --fourthColor: #FFBF69;
+    --fourthColor: rgb(238, 238, 238);;
     --fifthColor: #FF9F1C;
 }
 h1, h2, h3, h4, h5, h6 {
@@ -183,8 +183,6 @@ button {
     height: 100%;
 }
 .content .hero button {
-    background-color: var(--fourthColor);
-    color: black;
     position: absolute;
     right: 2rem;
     bottom: 2rem;
@@ -257,7 +255,6 @@ button {
 .spotlights div { 
     background-color: var(--fourthColor);
     flex: 1 1 auto;
-    box-shadow: 5px 5px 8px black;
     padding: 1rem;
 }
 .spotlights img {
