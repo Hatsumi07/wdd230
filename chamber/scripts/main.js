@@ -80,7 +80,7 @@ const day = hour * 24;
 let fromLastVisit = 0;
 if (!localStorage.getItem('todayVisit')) {
   localStorage.setItem('todayVisit', now.getTime());
-  daysOffMsg.innerHTML('Welcome to the Comas Chamber of Commerce');
+  daysOffMsg.textContent = 'Welcome to the Comas Chamber of Commerce!';
 } else {
   const lastVisit = localStorage.getItem('todayVisit');
   localStorage.setItem('todayVisit', now.getTime());
