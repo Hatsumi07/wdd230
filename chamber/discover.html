@@ -14,59 +14,6 @@
     <link rel="stylesheet" href="styles/large.css">
 </head>
 <body onload="meetingReminder(); getWindChill()">
-    <style>
-        h1 {
-            text-align: center;
-        }
-        .discover img {
-            padding: 0px;
-            margin: 0px;
-            width: 100%;
-        }
-        .discover source {
-            padding: 0px;
-            margin: 0px;
-        }
-        .discover_gallery {
-            position: relative;
-        }
-        .discover_gallery p {
-            color: white;
-            bottom: -1rem;
-            position: absolute;
-            padding: 1rem;
-            background: rgb(0, 0, 0);
-            background: rgba(0, 0, 0, 0.5);
-        }
-        picture > * [data-src] {
-            filter: blur(0.2em);
-        }
-        picture > * {
-            width: 100%;
-            display: block;
-            padding-bottom: 2rem;
-            margin: 0 auto;
-            filter: blur(0em);
-            transition: filter 0.5s;
-        }   
-        .comas_info {
-            min-height: fit-content;
-            grid-column: 1/2;
-            grid-row: 1/2;
-            position: sticky;
-            top: 0;
-            padding: 1rem;
-            background-color: rgb(238, 238, 238);
-        }
-        .comas_info div {
-            margin: 0.8rem;
-            font-family: "quicksand", sans-serif;
-        }
-        .comas_info span {
-            font-size: 1.2rem;
-            font-weight: bold;
-        }
-    </style>
     <div class="meeting">
         <p>
             🤝🏼 Come join us for the chamber meet and greet Wednesday at 7:00 p.m.
@@ -107,51 +54,6 @@
     </header>
     <main>
         <div class="content">
-            <div class="discover_gallery">
-                <picture class="discover">
-                    <source srcset="images/placeholder_image.jpg" data-src="images/playas_500.webp" >
-                    <source media="(min-width:800px)" srcset="images/placeholder_image.jpg" data-src="images/playas_1000.webp">
-                    <source media="(min-width:1000px)" srcset="images/placeholder_image.jpg" data-src="images/playas_1500.webp">
-                    <img src="images/placeholder_image.jpg" data-src="images/playas_1000.jpg"/>
-                </picture>
-                <p>Beaches nearby</p>
-            </div>
-            <div class="discover_gallery">
-                <picture class="discover">
-                    <source srcset="images/placeholder_image.jpg" data-src="images/ambulantes_500.webp">
-                    <source media="(min-width:800px)"  srcset="images/placeholder_image.jpg" data-src="images/ambulantes_1000.webp">
-                    <source media="(min-width:1000px)" srcset="images/placeholder_image.jpg" data-src="images/ambulantes_1500.webp">
-                    <img src="images/placeholder_image.jpg" data-src="images/ambulantes_1000.jpg"/>
-                </picture>
-                <p>Support ambulantes</p>
-            </div>
-            <div class="discover_gallery">
-                <picture class="discover">
-                    <source srcset="images/placeholder_image.jpg" data-src="images/cevicherias_500.webp">
-                    <source media="(min-width:800px)" srcset="images/placeholder_image.jpg" data-src="images/cevicherias_1000.webp">
-                    <source media="(min-width:1000px)" srcset="images/placeholder_image.jpg" data-src="images/cevicherias_1500.webp">
-                    <img src="images/placeholder_image.jpg" data-src="images/cevicherias_1000.jpg"/>
-                </picture>
-                <p>Sea food restaurants nearby</p>
-            </div>
-            <div class="discover_gallery">
-                <picture class="discover">
-                    <source srcset="images/placeholder_image.jpg" data-src="images/parque_de_aguas_500.webp">
-                    <source media="(min-width:800px)" srcset="images/placeholder_image.jpg" data-src="images/parque_de_aguas_1000.webp">
-                    <source media="(min-width:1000px)" srcset="images/placeholder_image.jpg" data-src="images/parque_de_aguas_1500.webp">
-                    <img src="images/placeholder_image.jpg" data-src="images/parque_de_aguas_1000.jpg"/>
-                </picture>
-                <p>Visit el parque de las aguas</p>
-            </div>
-            <div class="discover_gallery">
-                <picture class="discover">
-                    <source srcset="images/placeholder_image.jpg" data-src="images/arte_urbano_500.webp">
-                    <source media="(min-width:800px)" srcset="images/placeholder_image.jpg" data-src="images/arte_urbano_1000.webp">
-                    <source media="(min-width:1000px)" srcset="images/placeholder_image.jpg" data-src="images/arte_urbano_1500.webp">
-                    <img src="images/placeholder_image.jpg" data-src="images/arte_urbano_1000.jpg"/>
-                </picture>
-                <p>See urban art</p>
-            </div>
             <div class="comas_info">
                 <div>
                     <p><span>Average Monthly Income: </span>1,700.3 soles</p>
@@ -171,6 +73,51 @@
                 <div>
                     <p><span>Elevation: </span>140 m</p>
                 </div>
+            </div>
+            <div class="discover_gallery">
+                <picture class="discover">
+                    <source media="(max-width:799px)" srcset="images/placeholder_image.jpg" data-src="images/playas_500.webp" >
+                    <source media="(min-width:800px)" srcset="images/placeholder_image.jpg" data-src="images/playas_1000.webp">
+                    <source media="(min-width:1000px)" srcset="images/placeholder_image.jpg" data-src="images/playas_1500.webp">
+                    <img src="images/placeholder_image.jpg" alt="Go to the beach in Lima" data-src="images/playas_1000.jpg">
+                </picture>
+                <p>Beaches nearby</p>
+            </div>
+            <div class="discover_gallery">
+                <picture class="discover">
+                    <source media="(max-width:799px)" srcset="images/placeholder_image.jpg" data-src="images/ambulantes_500.webp">
+                    <source media="(min-width:800px)"  srcset="images/placeholder_image.jpg" data-src="images/ambulantes_1000.webp">
+                    <source media="(min-width:1000px)" srcset="images/placeholder_image.jpg" data-src="images/ambulantes_1500.webp">
+                    <img src="images/placeholder_image.jpg" alt="Support street sellers'" data-src="images/ambulantes_1000.jpg">
+                </picture>
+                <p>Support ambulantes</p>
+            </div>
+            <div class="discover_gallery">
+                <picture class="discover">
+                    <source media="(max-width:799px)" srcset="images/placeholder_image.jpg" data-src="images/cevicherias_500.webp">
+                    <source media="(min-width:800px)" srcset="images/placeholder_image.jpg" data-src="images/cevicherias_1000.webp">
+                    <source media="(min-width:1000px)" srcset="images/placeholder_image.jpg" data-src="images/cevicherias_1500.webp">
+                    <img src="images/placeholder_image.jpg" alt="Eat in the best sea food restaurants" data-src="images/cevicherias_1000.jpg">
+                </picture>
+                <p>Sea food restaurants nearby</p>
+            </div>
+            <div class="discover_gallery">
+                <picture class="discover">
+                    <source media="(max-width:799px)" srcset="images/placeholder_image.jpg" data-src="images/parque_de_aguas_500.webp">
+                    <source media="(min-width:800px)" srcset="images/placeholder_image.jpg" data-src="images/parque_de_aguas_1000.webp">
+                    <source media="(min-width:1000px)" srcset="images/placeholder_image.jpg" data-src="images/parque_de_aguas_1500.webp">
+                    <img src="images/placeholder_image.jpg" alt="Visit 'el parque de las aguas'" data-src="images/parque_de_aguas_1000.jpg">
+                </picture>
+                <p>Visit el parque de las aguas</p>
+            </div>
+            <div class="discover_gallery">
+                <picture class="discover">
+                    <source media="(max-width:799px)" srcset="images/placeholder_image.jpg" data-src="images/arte_urbano_500.webp">
+                    <source media="(min-width:800px)" srcset="images/placeholder_image.jpg" data-src="images/arte_urbano_1000.webp">
+                    <source media="(min-width:1000px)" srcset="images/placeholder_image.jpg" data-src="images/arte_urbano_1500.webp">
+                    <img src="images/placeholder_image.jpg" alt="See urban art" data-src="images/arte_urbano_1000.jpg">
+                </picture>
+                <p>See urban art</p>
             </div>
         </div>
     </main>

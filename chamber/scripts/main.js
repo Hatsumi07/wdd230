@@ -12,6 +12,7 @@ datefieldUK.innerHTML = `<em>${fulldateUK}</em>`;
 const lastMdf = document.lastModified;
 document.querySelector(".lastMdf").innerHTML = `Last Modified: ${lastMdf}`;
 
+// responsive menu button
 function toggleMenu() {
 	document.getElementById("navigation").classList.toggle("open");
 	document.querySelector(".menu button").classList.toggle("open");
@@ -20,6 +21,7 @@ function toggleMenu() {
 const menuBtn = document.querySelector(".menu button");
 menuBtn.onclick = toggleMenu;
 
+//meeting reminder
 const meetingDiv = document.querySelector(".meeting");
 
 function popReminder () {
@@ -68,4 +70,31 @@ if ('IntersectionObserver' in window) {
   imagesToLoad.forEach((img) => {
     loadImages(img);
   });
+}
+
+//Local storage days off
+const daysOffMsg = document.getElementById('daysOffMsg');
+const minute = 1000 * 60;
+const hour = minute * 60;
+const day = hour * 24;
+let fromLastVisit = 0;
+if (!localStorage.getItem('todayVisit')) {
+  localStorage.setItem('todayVisit', now.getTime());
+  daysOffMsg.innerHTML('Welcome to the Comas Chamber of Commerce');
+} else {
+  const lastVisit = localStorage.getItem('todayVisit');
+  localStorage.setItem('todayVisit', now.getTime());
+  const todayVisit = localStorage.getItem('todayVisit');
+  fromLastVisit = Math.floor((todayVisit - lastVisit) / day);
+}
+console.log(fromLastVisit);
+if  (fromLastVisit == 0) {
+  daysOffMsg.textContent = 'Welcome to the Comas Chamber of Commerce!';
+} else if (0 < fromLastVisit) {
+  daysOffMsg.textContent = `We haven't heard from you this ${fromLastVisit} past days.`;
+}
+function closeDaysOff() {
+  daysOffDiv = document.querySelector('.daysOff');
+  daysOffDiv.style.display = 'none';
+
 }
