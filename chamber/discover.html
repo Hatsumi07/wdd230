@@ -12,6 +12,57 @@
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/medium.css">
     <link rel="stylesheet" href="styles/large.css">
+    <style>
+        h1 {
+            text-align: center;
+        }
+        .discover img {
+            padding: 0px;
+            margin: 0px;
+            width: 100%;
+        }
+        .discover source {
+            padding: 0px;
+            margin: 0px;
+        }
+        .discover_gallery {
+            position: relative;
+        }
+        .discover_gallery p {
+            color: white;
+            bottom: -1rem;
+            position: absolute;
+            padding: 1rem;
+            background: rgb(0, 0, 0);
+            background: rgba(0, 0, 0, 0.5);
+        }
+        picture > * [data-src] {
+            filter: blur(0.2em);
+        }
+        picture > * {
+            width: 100%;
+            display: block;
+            padding-bottom: 2rem;
+            margin: 0 auto;
+            filter: blur(0em);
+            transition: filter 0.5s;
+        }   
+        .comas_info {
+            min-height: fit-content;
+            position: sticky;
+            top: 0;
+            padding: 1rem;
+            background-color: rgb(238, 238, 238);
+        }
+        .comas_info div {
+            margin: 0.8rem;
+            font-family: "quicksand", sans-serif;
+        }
+        .comas_info span {
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body onload="meetingReminder(); getWindChill()">
     <div class="meeting">
