@@ -32,13 +32,19 @@
         .discover_gallery {
             position: relative;
         }
-        .discover_gallery p {
+        .discover_gallery div {
             color: white;
-            bottom: -1rem;
+            height: 10%;
             position: absolute;
-            padding: 1rem;
+            width: 100%;
             background: rgb(0, 0, 0);
-            background: rgba(0, 0, 0, 0.5);
+            border: none;
+        }
+        .discover_gallery div h3 { 
+            position: absolute;
+            top: 0;
+            font-family: "quicksand", sans-serif;
+            padding: 0 1rem;
         }
         picture > * [data-src] {
             filter: blur(0.2em);
@@ -51,13 +57,6 @@
             filter: blur(0em);
             transition: filter 0.5s;
         }   
-        .comas_info {
-            min-height: fit-content;
-            position: sticky;
-            top: 0;
-            padding: 1rem;
-            background-color: rgb(238, 238, 238);
-        }
         .comas_info div {
             margin: 0.8rem;
             font-family: "quicksand", sans-serif;
@@ -128,6 +127,9 @@
                 <div>
                     <p><span>Elevation: </span>140 m</p>
                 </div>
+                <div>
+                    <p id="daysOffMsg"></p>
+                </div>
             </div>
             <div class="discover_gallery">
                 <picture class="discover">
@@ -135,7 +137,9 @@
                     <source media="(min-width:800px)" srcset="images/placeholder_image.webp" data-src="images/playas_1000.webp">
                     <img src="images/placeholder_image.webp" alt="Go to the beach in Lima" data-src="images/playas_1000.jpg">
                 </picture>
-                <p>Beaches nearby</p>
+                <div>
+                    <h3>Beaches Nearby</h3>
+                </div>
             </div>
             <div class="discover_gallery">
                 <picture class="discover">
@@ -143,7 +147,9 @@
                     <source media="(min-width:800px)"  srcset="images/placeholder_image.webp" data-src="images/ambulantes_1000.webp">
                     <img src="images/placeholder_image.webp" alt="Support street sellers'" data-src="images/ambulantes_1000.jpg">
                 </picture>
-                <p>Support ambulantes</p>
+                <div>
+                    <h3>Support ambulantes</h3>
+                </div>
             </div>
             <div class="discover_gallery">
                 <picture class="discover">
@@ -151,7 +157,9 @@
                     <source media="(min-width:800px)" srcset="images/placeholder_image.webp" data-src="images/cevicherias_1000.webp">
                     <img src="images/placeholder_image.webp" alt="Eat in the best sea food restaurants" data-src="images/cevicherias_1000.jpg">
                 </picture>
-                <p>Sea food restaurants nearby</p>
+                <div>
+                    <h3>Sea food restaurants nearby</h3>
+                </div>
             </div>
             <div class="discover_gallery">
                 <picture class="discover">
@@ -159,7 +167,9 @@
                     <source media="(min-width:800px)" srcset="images/placeholder_image.webp" data-src="images/parque_de_aguas_1000.webp">
                     <img src="images/placeholder_image.webp" alt="Visit 'el parque de las aguas'" data-src="images/parque_de_aguas_1000.jpg">
                 </picture>
-                <p>Visit el parque de las aguas</p>
+                <div>
+                    <h3>Visit el parque de las aguas</h3>
+                </div>
             </div>
             <div class="discover_gallery">
                 <picture class="discover">
@@ -167,7 +177,9 @@
                     <source media="(min-width:800px)" srcset="images/placeholder_image.webp" data-src="images/arte_urbano_1000.webp">
                     <img src="images/placeholder_image.webp" alt="See urban art" data-src="images/arte_urbano_1000.jpg">
                 </picture>
-                <p>See urban art</p>
+                <div>
+                    <h3>See urban art</h3>
+                </div>
             </div>
         </div>
     </main>

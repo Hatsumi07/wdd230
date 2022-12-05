@@ -111,4 +111,8 @@
         border-left: 2px solid black;
     }
     /*----------------------------------------------*/
+    /*discover page*/
+    .comas_info {
+        position: sticky;
+    }
 }

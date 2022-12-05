@@ -104,7 +104,7 @@ header nav ul.open {
     align-items: center;
 }
 .logo img {
-    width: 5rem;
+    width: 80%;
     flex: 1 1 auto;
 }
 .logo h1 {
@@ -140,37 +140,8 @@ button {
     font-family: 'quicksand', sans-serif;
     border: none;
     font-weight: bold;
-}
-.daysOff {
-    top: 0;
-    left: 0;
-    position: fixed;
-    z-index: 1;
-    background: rgb(91, 91, 91);
-    background: rgba(71, 71, 71, 0.3);
-    width: 100%;
-    height: 100vh;
-    align-items: center;
-    justify-content: center;
-}
-.daysOff div{
-    top: 30%;
-    left: 30%;
-    position: relative;
-    text-align: center;
-    background-color: white;
-    border: 1px solid rgb(224, 224, 224);
-    width: 40%;
     font-family: 'quicksand', sans-serif;
-    color: #000000;
-    padding: 3rem 1rem;
-    
-}
-.daysOff button {
-    position: absolute;
-    top: 5%;
-    right: 5%;
-    background: transparent;
+    font-size: 2rem;
 }
 .content {
     display: flex;
@@ -313,4 +284,19 @@ header nav.large_screen {
 }
 footer div:nth-child(2) {
     margin: 3rem 0;
+}
+#footer_logo img {
+    max-width: 30%;
+}
+/*discover page*/
+.comas_info {
+    min-height: fit-content;
+    top: 0;
+    padding: 1rem;
+    background-color: rgb(238, 238, 238);
+}
+#daysOffMsg {
+    color: #2EC4B6;
+    font-size: 1.5rem;
+    font-weight: bold;
 }
