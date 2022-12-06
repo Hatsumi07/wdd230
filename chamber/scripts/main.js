@@ -97,3 +97,12 @@ if (fromLastVisit == 1) {
 } else if (0 < fromLastVisit) { 
   daysOffMsg.textContent = `We haven't heard from you this ${fromLastVisit} past days.`;
 }
+
+//form sign in date
+function liveDate() {
+  const date = new Date();
+  const dateInput = document.getElementById("signinDate");
+  dateInput.setAttribute("value", date);
+  console.log(date);
+  console.log(dateInput);
+}

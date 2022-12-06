@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="styles/medium.css">
     <link rel="stylesheet" href="styles/large.css">
 </head>
-<body onload="meetingReminder(); getWindChill()">
+<body onload="meetingReminder(), liveDate()">
     <div class="meeting">
         <p>
             🤝🏼 Come join us for the chamber meet and greet Wednesday at 7:00 p.m.
@@ -95,7 +95,7 @@
                     <label class="side"><input type="radio" name="membership" value="gold">Gold Membership</label>
                 </fieldset>
                 <label class="top">Business Description:<textarea name="description" rows="4" cols="50"></textarea></label>
-                <label><input type="hidden" name="date" value="3487"></label>
+                <label><input id="signinDate" type="hidden" name="date"></label>
                 <input type="submit" value="Join Chamber" class="submitBtn">
             </form>
         </div>
@@ -122,6 +122,5 @@
         </div>
     </footer>
     <script src="scripts/main.js"></script>
-    <script src="scripts/windchill.js"></script>
 </body>
 </html>
