@@ -81,7 +81,7 @@ const daysOffMsg = document.getElementById('daysOffMsg');
 const minute = 1000 * 60;
 const hour = minute * 60;
 const day = hour * 24;
-let fromLastVisit = 0;
+let fromLastVisit;
 if (!localStorage.getItem('todayVisit')) {
   localStorage.setItem('todayVisit', now.getTime());
   daysOffMsg.textContent = 'Welcome to the Comas Chamber of Commerce!';
@@ -92,9 +92,7 @@ if (!localStorage.getItem('todayVisit')) {
     fromLastVisit = Math.floor((todayVisit - lastVisit) / day);
   }
 console.log(fromLastVisit);
-if  (fromLastVisit == 0) {
-  daysOffMsg.textContent = 'Welcome to the Comas Chamber of Commerce!';
-} else if (fromLastVisit == 1) { 
+if (fromLastVisit == 1) { 
   daysOffMsg.textContent = `Is nice to see you again!`;
 } else if (0 < fromLastVisit) { 
   daysOffMsg.textContent = `We haven't heard from you this ${fromLastVisit} past days.`;
