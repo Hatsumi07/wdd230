@@ -55,4 +55,15 @@
     #footer_bottom p:nth-child(3) {
         border-left: 2px solid black;
     }
+    main div.thankyouNote {
+        grid-column: 1/-1;
+        padding: 0 3rem 3rem;
+        margin: 2rem 2rem 5rem 2rem;
+    }
+    main div.thankyouNote h1 {
+        font-size: 2rem;
+    }
+    main div.thankyouNote p {
+        font-size: 1.3rem;
+    }
 }

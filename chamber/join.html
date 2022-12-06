@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comas Chamber of Commerce Home Page Build</title>
+    <link rel="icon" type="image/x-icon" href="images/comas_chamber_logo.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,300;1,300&family=Quicksand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/normalize.css"> 
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/medium.css">
+    <link rel="stylesheet" href="styles/large.css">
+</head>
+<body onload="meetingReminder(); getWindChill()">
+    <div class="meeting">
+        <p>
+            🤝🏼 Come join us for the chamber meet and greet Wednesday at 7:00 p.m.
+        </p>
+        <button onclick="popReminder()">X</button>
+    </div>
+    <header>
+        <div class="presentation">
+            <div class="logo">
+                <a href="index.html"><img alt="logo of the site" src="images/comas_chamber_logo.webp"></a>
+                <a href="index.html" style="text-decoration: none; color: black;"><h1>Comas<br>Chamber of Commerce</h1></a>
+            </div>
+            <nav class="large_screen">
+                <ul id="navigation_large">
+                    <li><a href="discover.html">Discover</a></li>
+                    <li><a href="#">Directory</a></li>
+                    <li><a href="#">Join</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="social">
+                <a href="https://www.facebook.com/"><img alt="facebook icon" src="images/Facebook_Logo.webp"></a>
+                <a href="https://www.linkedin.com/"><img alt="linkedin icon" src="images/Linkedin_Logo.webp"></a>
+            </div>
+            <div class="menu">
+                <button><span>&#9776;</span><span>X</span></button>
+            </div>
+        </div>
+        <nav class="small_screen">
+            <ul id="navigation">
+                <li><a href="discover.html">Discover</a></li>
+                <li><a href="#">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="date"></div>
+    </header>
+    <main>
+        <div class="content">
+            <div class="membershipInf">
+                <h2>NP Membership</h2>
+                <ul>
+                    <li>For non-profit organizations.</li>
+                    <li>No fee charged.</li>
+                </ul>
+                <h2>Bronze Membership</h2>
+                <ul>
+                    <li>Monthly fee of $20.00</li>
+                    <li>Weekly assesories on finances.</li>
+                    <li>1 week of best spotlights on homepage.</li>
+                </ul>
+                <h2>Silver Membership</h2>
+                <ul>
+                    <li>Monthly fee of $50.00</li>
+                    <li>Weekly assesories on finances, and customer service.</li>
+                    <li>2 weeks of best spotlights on homepage.</li>
+                </ul>
+                <h2>Gold Membership</h2>
+                <ul>
+                    <li>Monthly fee of $90.00</li>
+                    <li>Weekly assesories on finances, customer service, social media marketing, and brand positioning.</li>
+                    <li>Enjoy best spotlights on homepage all month.</li>
+                </ul>
+            </div>
+            <form method="get" action="thankyou.html">
+                <h2>Sign in</h2>
+                <label class="top">Enter First Name * <input type="text" name="fname" required></label>
+                <label class="top">Enter Last Name * <input type="text" name="lname" required></label>
+                <label class="top">Enter Business Position <input type="text" name="position" pattern="[A-Za-z\s-]{7,}" title="7 characters minimun. Accepts spaces, hyphens and letters."></label>
+                <label class="top">Enter Email Address * <input type="email" name="email" placeholder="someone@gmail.com" required></label>
+                <label class="top">Enter Cellphone Number * <input type="tel" name="phone" required></label>
+                <label class="top">Business Name * <input type="text" name="businessName" title="The name of your business" required></label>
+                <fieldset>
+                    <legend>Membership Level</legend>
+                    <label class="side"><input type="radio" name="membership" value="np">NP Membership</label>
+                    <label class="side"><input type="radio" name="membership" value="bronze">Bronze Membership</label>
+                    <label class="side"><input type="radio" name="membership" value="silver">Silver Membership</label>
+                    <label class="side"><input type="radio" name="membership" value="gold">Gold Membership</label>
+                </fieldset>
+                <label class="top">Business Description:<textarea name="description" rows="4" cols="50"></textarea></label>
+                <label><input type="hidden" name="date" value="3487"></label>
+                <input type="submit" value="Join Chamber" class="submitBtn">
+            </form>
+        </div>
+    </main>
+    <footer>
+        <div id="footer_logo">
+            <img alt="logo of the site" src="images/comas_chamber_logo.webp">
+            <h3>Comas Chamber of Commerce</h3>
+        </div>
+        <div>
+            <address>
+                Av. Huaynacapac 964, Comas<br>
+                Peru<br>
+                crystalhatsumi07@gmail.com<br>
+                +(51) 967 798 763<br>
+            </address>
+        </div>
+        <hr>
+        <div id="footer_bottom">
+            <p>&copy; 2022 | Crystal Cardenas | BYU-Idaho</p>
+            <p><strong>Crystal Hatsumi Cardenas Godoy</strong></p>
+            <p>WDD 230 Project</p>
+            <p class="lastMdf"></p>
+        </div>
+    </footer>
+    <script src="scripts/main.js"></script>
+    <script src="scripts/windchill.js"></script>
+</body>
+</html>

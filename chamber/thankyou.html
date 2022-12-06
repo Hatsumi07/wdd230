@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comas Chamber of Commerce Home Page Build</title>
+    <link rel="icon" type="image/x-icon" href="images/comas_chamber_logo.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,300;1,300&family=Quicksand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/normalize.css"> 
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/medium.css">
+    <link rel="stylesheet" href="styles/large.css">
+</head>
+<body onload="meetingReminder(); getWindChill()">
+    <div class="meeting">
+        <p>
+            🤝🏼 Come join us for the chamber meet and greet Wednesday at 7:00 p.m.
+        </p>
+        <button onclick="popReminder()">X</button>
+    </div>
+    <header>
+        <div class="presentation">
+            <div class="logo">
+                <a href="index.html"><img alt="logo of the site" src="images/comas_chamber_logo.webp"></a>
+                <a href="index.html" style="text-decoration: none; color: black;"><h1>Comas<br>Chamber of Commerce</h1></a>
+            </div>
+            <nav class="large_screen">
+                <ul id="navigation_large">
+                    <li><a href="discover.html">Discover</a></li>
+                    <li><a href="#">Directory</a></li>
+                    <li><a href="#">Join</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="social">
+                <a href="https://www.facebook.com/"><img alt="facebook icon" src="images/Facebook_Logo.webp"></a>
+                <a href="https://www.linkedin.com/"><img alt="linkedin icon" src="images/Linkedin_Logo.webp"></a>
+            </div>
+            <div class="menu">
+                <button><span>&#9776;</span><span>X</span></button>
+            </div>
+        </div>
+        <nav class="small_screen">
+            <ul id="navigation">
+                <li><a href="discover.html">Discover</a></li>
+                <li><a href="#">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="date"></div>
+    </header>
+    <main>
+        <div class="thankyouNote">
+            <h1>Welcome to the Comas Chamber of Commerce</h1>
+            <p>Thanks for choosing our site to promote your business, and for helping Comas keep growing.</p>
+        </div>
+    </main>
+    <footer>
+        <div id="footer_logo">
+            <img alt="logo of the site" src="images/comas_chamber_logo.webp">
+            <h3>Comas Chamber of Commerce</h3>
+        </div>
+        <div>
+            <address>
+                Av. Huaynacapac 964, Comas<br>
+                Peru<br>
+                crystalhatsumi07@gmail.com<br>
+                +(51) 967 798 763<br>
+            </address>
+        </div>
+        <hr>
+        <div id="footer_bottom">
+            <p>&copy; 2022 | Crystal Cardenas | BYU-Idaho</p>
+            <p><strong>Crystal Hatsumi Cardenas Godoy</strong></p>
+            <p>WDD 230 Project</p>
+            <p class="lastMdf"></p>
+        </div>
+    </footer>
+    <script src="scripts/main.js"></script>
+    <script src="scripts/windchill.js"></script>
+</body>
+</html>
