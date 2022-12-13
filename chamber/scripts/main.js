@@ -92,9 +92,11 @@ if (!localStorage.getItem('todayVisit')) {
     fromLastVisit = Math.floor((todayVisit - lastVisit) / day);
   }
 console.log(fromLastVisit);
-if (fromLastVisit == 1) { 
-  daysOffMsg.textContent = `Is nice to see you again!`;
-} else if (0 < fromLastVisit) { 
+if (fromLastVisit < 1) { 
+  daysOffMsg.textContent = "Don't miss any news!";
+} else if (1 == fromLastVisit) { 
+  daysOffMsg.textContent = 'Is nice to see you again!';
+} else if (1 < fromLastVisit) { 
   daysOffMsg.textContent = `We haven't heard from you this ${fromLastVisit} past days.`;
 }
 
@@ -105,4 +107,48 @@ function liveDate() {
   dateInput.setAttribute("value", date);
   console.log(date);
   console.log(dateInput);
+}
+
+//-------------------Directory---------------------
+const filePath = 'jason/data.json';
+const cards = document.querySelector('.cards');
+fetch(filePath)
+  .then(function (response) {
+    return response.json();
+  })
+  .then(function (jsonObject) {
+    const companies = jsonObject['companies'];
+    console.table(jsonObject);  // temporary checking for valid response and data parsing
+    companies.forEach(company => displayCompanies(company));
+  });
+
+function displayCompanies(company) {
+  // Create elements to add to the document
+  let card = document.createElement('section');
+  let name = document.createElement('h2');
+  let logo = document.createElement('img');
+  let address = document.createElement('p');
+  let phone = document.createElement('p');
+  let url = document.createElement('a');
+
+  // Change the textContent property of the h2 element to contain the company's full name
+  name.textContent = company.name;
+  address.textContent = company.address;
+  phone.textContent = company.phone;
+  url.innerHTML = company.url;
+
+// Build the image attributes by using the setAttribute method for the src, alt, and loading attribute values. (Fill in the blank with the appropriate variable).
+  logo.setAttribute('src', company.image);
+  logo.setAttribute('alt', 'Logo of ' + company.name + '.');
+  logo.setAttribute('loading', 'lazy');
+
+  // Add/append the section(card) with the h2 element
+  card.appendChild(name);
+  card.appendChild(logo);
+  card.appendChild(address);
+  card.appendChild(phone);
+  card.appendChild(url);
+
+  // Add/append the existing HTML div with the cards class with the section(card)
+  document.querySelector('div.cards').appendChild(card);
 }

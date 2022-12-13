@@ -114,4 +114,8 @@
     .comas_info {
         position: sticky;
     }
+    /*directory page*/
+    .cards {
+        margin: 1rem 8rem;
+    }
 }
