@@ -71,44 +71,6 @@ if ('IntersectionObserver' in window) {
     loadImages(img);
   });
 }
-
-//Local storage days off
-const daysOffDiv = document.querySelector('.daysOff');
-function closeDaysOff() {
-  daysOffDiv.style.display = 'none';
-}
-const daysOffMsg = document.getElementById('daysOffMsg');
-const minute = 1000 * 60;
-const hour = minute * 60;
-const day = hour * 24;
-let fromLastVisit;
-if (!localStorage.getItem('todayVisit')) {
-  localStorage.setItem('todayVisit', now.getTime());
-  daysOffMsg.textContent = 'Welcome to the Comas Chamber of Commerce!';
-  } else {
-    const lastVisit = localStorage.getItem('todayVisit');
-    localStorage.setItem('todayVisit', now.getTime());
-    const todayVisit = localStorage.getItem('todayVisit');
-    fromLastVisit = Math.floor((todayVisit - lastVisit) / day);
-  }
-console.log(fromLastVisit);
-if (fromLastVisit < 1) { 
-  daysOffMsg.textContent = "Don't miss any news!";
-} else if (1 == fromLastVisit) { 
-  daysOffMsg.textContent = 'Is nice to see you again!';
-} else if (1 < fromLastVisit) { 
-  daysOffMsg.textContent = `We haven't heard from you this ${fromLastVisit} past days.`;
-}
-
-//form sign in date
-function liveDate() {
-  const date = new Date();
-  const dateInput = document.getElementById("signinDate");
-  dateInput.setAttribute("value", date);
-  console.log(date);
-  console.log(dateInput);
-}
-
 //-------------------Directory---------------------
 const filePath = 'jason/data.json';
 const cards = document.querySelector('.cards');
@@ -151,4 +113,49 @@ function displayCompanies(company) {
 
   // Add/append the existing HTML div with the cards class with the section(card)
   document.querySelector('div.cards').appendChild(card);
+}
+const divCards = document.querySelector('div.cards');
+const divList = document.querySelector('div.list');
+function displayCards() {
+  cards.setAttribute("class", "cards");
+}
+function displayList() {
+  cards.setAttribute("class", "list");
+}
+
+//Local storage days off
+const daysOffDiv = document.querySelector('.daysOff');
+function closeDaysOff() {
+  daysOffDiv.style.display = 'none';
+}
+const daysOffMsg = document.getElementById('daysOffMsg');
+const minute = 1000 * 60;
+const hour = minute * 60;
+const day = hour * 24;
+let fromLastVisit;
+if (!localStorage.getItem('todayVisit')) {
+  localStorage.setItem('todayVisit', now.getTime());
+  daysOffMsg.textContent = 'Welcome to the Comas Chamber of Commerce!';
+  } else {
+    const lastVisit = localStorage.getItem('todayVisit');
+    localStorage.setItem('todayVisit', now.getTime());
+    const todayVisit = localStorage.getItem('todayVisit');
+    fromLastVisit = Math.floor((todayVisit - lastVisit) / day);
+  }
+console.log(fromLastVisit);
+if (0 == fromLastVisit) { 
+  daysOffMsg.textContent = `Don't miss any news!`;
+} else if (1 == fromLastVisit) { 
+  daysOffMsg.textContent = 'Is nice to see you again!';
+} else if (1 < fromLastVisit) { 
+  daysOffMsg.textContent = `We haven't heard from you this ${fromLastVisit} past days.`;
+}
+
+//form sign in date
+function liveDate() {
+  const date = new Date();
+  const dateInput = document.getElementById("signinDate");
+  dateInput.setAttribute("value", date);
+  console.log(date);
+  console.log(dateInput);
 }

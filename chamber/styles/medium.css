@@ -77,4 +77,7 @@
         font-size: 1rem;
     }
     .cards h2 { color: #3f8e87; margin-top: 0px; font-weight: bold; font-size: 1.3rem;}
+    .directoryBtn {
+        font-size: 2rem;
+    }
 }

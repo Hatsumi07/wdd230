@@ -115,7 +115,13 @@
         position: sticky;
     }
     /*directory page*/
-    .cards {
+    div.cards {
         margin: 1rem 8rem;
+    }
+    div.list {
+        margin: 1rem 8rem;
+    }
+    .btnsContainer {
+        margin-top: 2rem;
     }
 }
