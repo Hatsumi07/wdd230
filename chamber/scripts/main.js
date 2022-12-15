@@ -131,7 +131,6 @@ function displayCompanies(company) {
 
   // Add/append the existing HTML div with the cards class with the section(card)
   document.querySelector('div.cards').appendChild(card);
-  spotlight(company);
 }
 const divCards = document.querySelector('div.cards');
 const divList = document.querySelector('div.list');

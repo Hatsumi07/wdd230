@@ -51,7 +51,6 @@
     }
     .content .join {
         display: block;
-        grid-row: 3/4;
     }
     .content .event {
         grid-row: 1/2;

@@ -159,7 +159,7 @@ header nav ul.open {
     font-family: 'quicksand', sans-serif;
 }
 
-.content .join {
+.content div.join {
     display: none;
     padding: 1rem;
 }
@@ -250,7 +250,7 @@ header nav ul.open {
     font-family: 'quicksand', sans-serif;
     padding: 1rem;
 }
-.content .join {
+.content div.join {
     text-align: center;
     font-family: 'quicksand', sans-serif;
     padding: 1rem;
