@@ -82,8 +82,26 @@ fetch(filePath)
     const companies = jsonObject['companies'];
     console.table(jsonObject);  // temporary checking for valid response and data parsing
     companies.forEach(company => displayCompanies(company));
+    companies.forEach(company => spotlight(company));
   });
 
+function spotlight(company) {
+  console.log("reached spotlight function");
+  const spotlights = ["first", "second", "third"];
+    if (company.membership = "gold" && spotlights.length != 0) {
+      const h2 = document.querySelector(`.${spotlights[0]} h2`);
+      const img = document.querySelector(`.${spotlights[0]} img`);
+      const address = document.querySelector(`.${spotlights[0]} address`);
+      const url = document.querySelector(`.${spotlights[0]} address a`);
+      url.href = company.url;
+      url.textContent = company.url;
+
+      h2.textContent = company.name;
+      img.textContent = company.img;
+      address.innerHTML = `${company.address}<br>${company.phone}<br>`;
+    }
+
+}
 function displayCompanies(company) {
   // Create elements to add to the document
   let card = document.createElement('section');
@@ -113,6 +131,7 @@ function displayCompanies(company) {
 
   // Add/append the existing HTML div with the cards class with the section(card)
   document.querySelector('div.cards').appendChild(card);
+  spotlight(company);
 }
 const divCards = document.querySelector('div.cards');
 const divList = document.querySelector('div.list');
