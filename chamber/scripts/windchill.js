@@ -36,7 +36,7 @@ function capitalize(string) {
     img.setAttribute("alt", desc);
     temperature.textContent = weatherData.main.temp.toFixed(0);
     description.textContent = desc;
-    windSpeed.textContent = weatherData.wind.speed * 3.6.toFixed(2);
+    windSpeed.textContent = (weatherData.wind.speed * 3.6).toFixed(2);
     getWindChill(weatherData.main.temp, weatherData.wind.speed);
 
   }
