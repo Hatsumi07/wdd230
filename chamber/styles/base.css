@@ -346,10 +346,10 @@ form label.top input {
     width: 90%;
     max-width: 30rem;
 }
-form label.top input:required {
+form.join label.top input:required {
     border-left: red solid 6px;
 }
-form label.top input:required:valid {
+form.join label.top input:required:valid {
     border-left: green solid 6px;
 }
 form label.top textarea {
@@ -475,3 +475,45 @@ div.cards {
     margin-top: 1rem;
     text-align: center;
   }
+
+/*----------------------CONTACT PAGE---------------*/
+form.contact {
+    background: transparent;
+    border: none;
+    width: fit-content;
+}
+form.contact label input,
+form.contact label textarea {
+    width: 100%;
+    border: 2px solid rgb(223, 223, 223);
+    margin: none;
+}
+form.contact label input {
+    border-radius: 50px;
+    padding: 0px 10px;
+}
+form.contact label textarea {
+    border-radius: 20px;
+    padding: 10px;
+}
+form.contact input.submitBtn {
+    width: 100%;
+    box-shadow: none;
+    background: linear-gradient(to left, #2EC4B6,#0055ff);
+    color: white;
+    font-weight: bold;
+} 
+.map {
+    position:relative;
+    width:100%;
+}
+.gmap_canvas {
+    overflow:hidden;
+    background:none
+    !important;
+    max-width:100%;
+    margin: 2rem;
+}
+.gmap_iframe {
+    height:500px!important;
+}

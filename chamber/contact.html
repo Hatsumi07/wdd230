@@ -52,8 +52,22 @@
         </nav>
         <div class="date"></div>
     </header>
-    <main>
-        
+    <main style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));">
+        <div class="map">
+            <div class="gmap_canvas">
+                <iframe class="gmap_iframe" width="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=419&amp;height=400&amp;hl=en&amp;q=av.huaynacapac 964 comas lima peru&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">      
+                </iframe>
+            </div>
+        </div>
+        <form method="get" action="thankyou.html" class="contact">
+            <h2>Have Some Questions?</h2>
+            <label class="top"><input type="text" name="fname" required placeholder="Enter your name"></label>
+            <label class="top"><input type="text" name="lname" required placeholder="Enter your last name"></label>
+            <label class="top"><input type="email" name="email" placeholder="Your email" required></label>
+            <label class="top"><textarea name="description" rows="4" cols="50" placeholder="What are your concerns?"></textarea></label>
+            <label><input id="signinDate" type="hidden" name="date"></label>
+            <input type="submit" value="Send Message" class="submitBtn">
+        </form>
     </main>
     <footer>
         <div id="footer_logo">
