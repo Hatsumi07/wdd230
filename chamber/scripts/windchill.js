@@ -47,7 +47,7 @@ function getWindChill (tempC, speedMeters) {
     const speedMiles = speedMeters * 2.23;
     if (tempF <= 50 && speedMiles > 3.0) {
         const windChillFactor = 35.74 + (0.6215 * tempF) - (35.75 * (speedMiles ** 0.16)) + (0.4275 * tempF * (speedMiles ** 0.16));
-        windChill.textContent = windChillFactor.toFixed(4);
+        windChill.textContent = windChillFactor.toFixed(2);
     }
     else {
         console.log("didn't match requirements");

@@ -74,3 +74,18 @@ ul#navigation li a{
     color: rgb(0, 255, 213);
     border: 3px dashed rgb(0, 255, 213);
 }
+.weather {
+    display: flex;
+}
+.weather div.day {
+    border-right: 1.5px solid black;
+    background-color: rgb(255, 85, 0);
+    font-family: "quicksand", sans-serif;
+    display: inline;
+    width: fit-content;
+    flex: 1 1 auto;
+    padding: 0 .75rem;
+}
+.weather div.day:nth-child(even) {
+    background-color: rgb(255, 85, 0);
+}
