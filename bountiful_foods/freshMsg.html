@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/medium.css">
 </head>
-<body>
+<body onload="mixFruits()">
     <header>
         <div class="presentation">
             <nav class="large_screen">
@@ -41,23 +41,7 @@
         </nav>
     </header>
     <main>
-        <div class="fruitsMixed">
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-        </div>
-        <form method="get" action="freshMsg.html" id="mix" class="mix">
-            <h2>Make your Drink</h2>
-            <label><input type="text" name="fname" id="fname" required placeholder="Enter your first name"></label>
-            <label><input type="email" name="email" id="email" placeholder="Enter your e-mail" required></label>
-            <label><input type="tel" name="phone" id="phone" required placeholder="Enter your phone number"></label>
-            <fieldset></fieldset>
-            <label><textarea name="description" rows="4" cols="50" placeholder="Add special instructions."></textarea></label>
-            <input type="submit" value="Mix Fruits" class="submitBtn">
-        </form>
+        <div class="fruitsMixed"></div>
     </main>
     <footer>
         <div>

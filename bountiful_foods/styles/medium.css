@@ -1,4 +1,10 @@
 @media only screen and (min-width: 800px) {
+    header .presentation {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        align-items: center;
+        width: 100%;
+    }
     .large_screen {
         display: block;
     }
@@ -17,6 +23,7 @@
         list-style: none;
     }
     ul#navigation_large li a{
+        border-radius: 50px;
         font-size: 1.3rem;
         font-family: "quicksand", sans-serif;
         text-align: center;
@@ -24,5 +31,49 @@
         display: block;
         text-decoration: none;
         color: black;
+        margin: 0px 1rem;
+    }    
+    ul#navigation_large li a:hover {
+        background-color: brown;
+        color: white;
+    }
+    .footer_bottom{
+        display: flex;
+        flex-direction: row;
+    }
+    .hero h2 {
+        right: 5rem;
+        top: 5rem;
+        font-size: 2.5rem;
+    }
+    .hero a {
+        font-size: 2rem;
+        right: 5rem;
+        bottom: 5rem;
+    }
+    .la {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+    .la p:nth-child(1) {
+        grid-column: 2/3;
+        grid-row: 1/2;
+    }
+    .la img:nth-child(1) {
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+    .social img {
+        max-width: 3rem;
+        padding: 1rem;
+    }
+    .social {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        left: 0px;
+        top: 5rem;
+        z-index: 1;
     }
 }

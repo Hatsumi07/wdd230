@@ -1,24 +1,56 @@
 header .presentation {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     align-items: center;
+    display: flex;
     width: 100%;
+    flex: 1 1 auto;
+    justify-content: flex-end;
 }
 .social img {
-    max-width: 3rem;
-    padding: 1rem;
+    max-width: 2rem;
+    padding: .5rem;
+}
+.social {
+    display: flex;
+}
+.social > * {
+    flex: 1 1 auto;
 }
 .large_screen {
     display: none;
 }
 .menu {
     display: block;
+    position: absolute;
+    left: 1rem;
+}
+.menu button {
+    border: none;
+    font-size: 2rem;
+    background: transparent;
+    color: black;
+    padding: 0;
+    font-family: sans-serif;
+}
+.menu button span:nth-child(1) {display: block;}
+.menu button span:nth-child(2) {display: none;}
+.menu button.open span:nth-child(1) {display: none;}
+.menu button.open span:nth-child(2) {display: block;}
+header nav ul {
+    display: none;
+}
+header nav ul.open {
+    display: block;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+
 }
 .small_screen {
     display: flex;
     flex-direction: column;
     width: 100%;
-    background-color: aquamarine;
+    background-color: rgb(244, 245, 245);
 }
 ul#navigation {
     padding: 0;
@@ -52,9 +84,9 @@ ul#navigation li a{
     z-index: 1;
     position: absolute;
     right: 5rem;
-    top: 5rem;
+    top: 4rem;
     font-family: "quicksand", sans-serif;
-    font-size: 1.5rem;
+    font-size: 1.75rem;
     color: white;
 }
 .hero a {
@@ -62,11 +94,11 @@ ul#navigation li a{
     font-family: "quicksand", sans-serif;
     font-weight: bold;
     position: absolute;
-    right: 5rem;
-    bottom: 5rem;
+    right: 10.5rem;
+    bottom: 1.75rem;
     text-decoration: none;
     color: white;
-    padding: 1rem 2rem;
+    padding: .5rem 1rem;
     border: 3px dashed white;
     border-radius: 50px;
 }
@@ -75,11 +107,13 @@ ul#navigation li a{
     border: 3px dashed rgb(0, 255, 213);
 }
 .weather {
+    overflow-x: auto;
+        overflow-y: hidden;
+    margin: 2rem 0;
     display: flex;
 }
 .weather div.day {
-    border-right: 1.5px solid black;
-    background-color: rgb(255, 85, 0);
+    background-color: rgb(111, 195, 210);
     font-family: "quicksand", sans-serif;
     display: inline;
     width: fit-content;
@@ -87,5 +121,106 @@ ul#navigation li a{
     padding: 0 .75rem;
 }
 .weather div.day:nth-child(even) {
-    background-color: rgb(255, 85, 0);
+    background-color: rgb(255, 189, 189);
+}
+.la {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 2rem 0;
+    max-width: 70%;
+}
+.la p{
+    margin: 0 auto;
+    padding: 1rem;
+    width: 300px;
+    text-align: center;
+    font-family: "quicksand", sans-serif;
+}
+.la picture,
+.la img {
+    margin: 0 auto;
+    max-width: 80%;
+    text-align: center;
+}
+.la img {
+    box-shadow: 5px 5px 5px grey;
+}
+footer {
+    color: black;
+    text-align: center;
+    font-family: "quicksand", sans-serif;
+    padding: 1rem 0;
+    background-color: rgb(255, 247, 247);
+}
+.lastMdf {
+    margin-bottom: 0px;
+    padding-bottom: .75rem;
+}
+footer > * {
+    padding-left: 2rem;
+}
+form.mix > * {
+    margin: 0 auto;
+}
+form.mix {
+    font-family: "quicksand", sans-serif;
+    background: transparent;
+    border: none;
+    width: fit-content;
+    max-width: 80%;
+    margin: 3rem auto;
+    margin-bottom: 2rem ;
+    text-align: center;
+}
+form.mix h2 {
+    font-size: 2rem;
+}
+form.mix label input,
+form.mix label textarea {
+    width: 100%;
+    border: 2px solid rgb(223, 223, 223);
+    margin: 1.3rem auto;
+}
+form.mix input.submitBtn {
+    margin: 0 auto;
+    width: 100%;
+    box-shadow: none;
+    background: linear-gradient(to left, #2EC4B6,#ff0000);
+    color: white;
+    font-weight: bold;
+    border-radius: 50px;
+    border: none;
+} 
+form.mix input,
+form.mix textarea,
+form.mix label {
+    display: block;
+}
+form.mix input {
+    height: 44px;
+    width: 90%;
+    max-width: 30rem;
+    border-radius: 50px;
+    padding: 0px 10px;
+}
+form.mix textarea {
+    width: 90%;
+    max-width: 30rem;   
+    border-radius: 20px;
+    padding: 10px;
+}
+form.mix fieldset {
+    text-align: left;
+    border-radius: 20px;
+    border: none;
+}
+form.mix fieldset legend {
+    margin-bottom: 1.3rem;
+    font-size: 1.3rem;
+}
+form.mix fieldset label {
+    margin-bottom: 1rem;
 }
