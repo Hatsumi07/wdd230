@@ -481,6 +481,9 @@ form.contact {
     background: transparent;
     border: none;
     width: fit-content;
+    max-width: 80%;
+    margin: 0 auto;
+    margin-bottom: 2rem ;
 }
 form.contact label input,
 form.contact label textarea {
@@ -512,7 +515,7 @@ form.contact input.submitBtn {
     background:none
     !important;
     max-width:100%;
-    margin: 2rem;
+    margin: 0px;
 }
 .gmap_iframe {
     height:500px!important;

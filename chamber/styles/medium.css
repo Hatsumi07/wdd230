@@ -80,4 +80,12 @@
     .directoryBtn {
         font-size: 2rem;
     }
+    form.contact {
+        max-width: 100%;
+        margin-left: 2rem;
+        margin-bottom: 3rem;
+    }
+    .gmap_canvas {
+        margin: 2rem;
+    }
 }
