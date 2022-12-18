@@ -3,13 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Comas Chamber of Commerce Home Page Build</title>
+    <title>Bountiful Fruits</title>
+    <link rel="icon" type="image/x-icon" href="images/bountiful_fruits.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,300;1,300&family=Quicksand&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/normalize.css"> 
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/medium.css">
+    <link rel="stylesheet" href="styles/large.css">
 </head>
 <body>
     <header>
@@ -19,7 +21,6 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="fresh.html">Fresh</a></li>
                     <li><a href="about_us.html">About Us</a></li>
-                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
             <div class="menu">
@@ -36,43 +37,36 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="fresh.html">Fresh</a></li>
                 <li><a href="about_us.html">About Us</a></li>
-                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
-    <main>
-        <div class="hero">
-            <h2>Make Your Own Fruit Drink!</h2>
-            <div></div>
-            <img src="images/fruits_hero.jpg" alt="bowl of fruits" 
-                srcset="images/fruits_hero_500.webp 500w,
-                        images/fruits_hero_1000.webp 1000w,
-                        images/fruits_hero_1500.webp 1500w"
-                        sizes="(min-width: 1000px) 100vw"
-            >
-            <a href="fresh.html">Mix Fruits</a>
+    <main id="aboutUs">
+        <div id="about">
+            <h2>Meet Bountiful Fruits</h2>
+            <p>We started as a small family business. Now we work hard to provide every city in California with quality porducts.</p>
+            <h3>Mission:</h3>
+            <p>Our mission is to provide every family in California with the best quality fruits.</p>
+            <h3>Vission:</h3>
+            <p>Our vission is to continue expanding our offices in more cities and reaching to more people.</p>
+            <address>
+                Contact us at:<br>
+                <a href="company@gmail.com">bountiful-fruits@gmail.com</a><br>
+                place 123, Los Angeles, California<br>
+                USA
+                </address>
         </div>
-        <div class="weather"></div>
-        <div class="la">
-            <p>Los Angeles is the largest city in the state of California and the second most populous city in the United States after New York City, as well as one of the world's most populous megacities.</p>
-            <picture>
-                <source media="(max-width:799px)" srcset="images/placeholder_image.webp" data-src="images/los_angeles_buildings_300.webp" >
-                <source media="(min-width:800px)" srcset="images/placeholder_image.webp" data-src="images/los_angeles_buildings_600.webp">
-                <img src="images/placeholder_image.webp" alt="Los Angeles" data-src="images/los_angeles_buildings_600.jpg">
-            </picture>
-            <p>Los Angeles is the commercial, financial, and cultural center of Southern California. With a population of roughly 3.9 million as of 2020,Los Angeles is known for its Mediterranean climate, ethnic and cultural diversity, Hollywood film industry, and sprawling metropolitan area.</p>
-            <picture>
-                <source media="(max-width:799px)" srcset="images/placeholder_image.webp" data-src="images/hollywood_300.webp" >
-                <source media="(min-width:800px)" srcset="images/placeholder_image.webp" data-src="images/hollywood_600.webp">
-                <img src="images/placeholder_image.webp" alt="Hollywood" data-src="images/hollywood_600.jpg">
-            </picture>
+        <div class="map">
+            <div class="gmap_canvas">
+                <iframe class="gmap_iframe" width="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=419&amp;height=400&amp;hl=en&amp;q=los angeles california&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">      
+                </iframe>
+            </div>
         </div>
     </main>
     <footer>
         <div>
             <address>
-                Av. Huaynacapac 964, Comas<br>
-                Peru<br>
+                Place 123, Los Angeles, California<br>
+                USA<br>
                 crystalhatsumi07@gmail.com<br>
                 +(51) 967 798 763<br>
             </address>

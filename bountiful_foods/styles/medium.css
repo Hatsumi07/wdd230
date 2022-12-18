@@ -1,4 +1,8 @@
 @media only screen and (min-width: 800px) {
+    .weather {
+        width: 80%;
+        margin: 2rem auto;
+    }
     header .presentation {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -55,6 +59,12 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
+        width: 70%;
+        gap: 1rem;
+        margin: 2rem auto;
+    }
+    .la img {
+        width: 80%;
     }
     .la p:nth-child(1) {
         grid-column: 2/3;
@@ -75,5 +85,33 @@
         left: 0px;
         top: 5rem;
         z-index: 1;
+    }
+    .social a img {
+        position: relative;
+        bottom: 0px;
+        transition: bottom 0.5s;
+    }
+    .social a img:hover {
+        bottom: 8px;
+    }
+    #fruitsMixed {
+        width: 50%;
+    }
+    main#aboutUs {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    main#aboutUs div#about {
+        margin: 2rem auto;
+        padding: 1.3rem;
+        border: 5px dashed black;
+        border-radius: 30px;
+        max-width: 60%;
+        font-family: "quicksand", sans-serif;
+        background-color: rgb(181, 241, 221);
+    }
+    .map {
+        margin: 2rem auto;
+        max-width: 80%;
     }
 }
