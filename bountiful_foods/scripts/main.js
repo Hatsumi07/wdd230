@@ -5,6 +5,9 @@ function toggleMenu() {
 
 const menuBtn = document.querySelector(".menu button");
 menuBtn.onclick = toggleMenu;
+//Last modified 
+const lastMdf = document.lastModified;
+document.querySelector(".lastMdf").textContent = `Last Modified: ${lastMdf}`
 
 const weather = document.querySelector("div.weather");
 const url = 'https://api.openweathermap.org/data/2.5/forecast?lat=34.05223&lon=-118.24368&units=metric&appid=07c38bb26d244f2a9856dcddf725921d';
@@ -236,6 +239,3 @@ console.log(localStorage.getItem("mixesNum"));
 
   }
 }
-
-const lastMdf = document.lastModified;
-document.querySelector(".lastMdf").textContent = `Last Modified: ${lastMdf}`

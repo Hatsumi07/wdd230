@@ -112,19 +112,25 @@ ul#navigation li a{
     margin: 2rem 0;
     display: grid;
     grid-template-rows: auto;
+    background-color: rgb(99, 185, 201);
+    border-right: 10px solid rgb(99, 185, 201);
+    border-left: 10px solid rgb(99, 185, 201);
 
 }
 .weather div.day {
     grid-row: 1/2;
-    background-color: rgb(111, 195, 210);
     font-family: "quicksand", sans-serif;
     display: inline;
     width: 200px;
     height: fit-content;
     padding: 0 1rem;
+    margin: 1rem;
+    border-radius: 30px;
+    background-color: white;
+
 }
-.weather div.day:nth-child(even) {
-    background-color: rgb(255, 189, 189);
+.weather div.day:nth-child(1) {
+    border: 5px solid rgb(99, 185, 201);
 }
 .la {
     justify-content: center;
@@ -164,8 +170,6 @@ footer img {
 .lastMdf {
     margin-bottom: 0px;
     padding-bottom: .75rem;
-}
-footer > * {
 }
 form#mixForm > * {
     margin: 0 auto;
