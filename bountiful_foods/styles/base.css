@@ -118,6 +118,7 @@ ul#navigation li a{
 
 }
 .weather div.day {
+    text-align: center;
     grid-row: 1/2;
     font-family: "quicksand", sans-serif;
     display: inline;
@@ -264,4 +265,17 @@ main#aboutUs div#about {
 }
 .gmap_iframe {
     height:500px!important;
+}
+#drinks {
+    font-size: 1.3rem;
+    font-family: "quicksand", sans-serif;
+    width: fit-content;
+    margin: 0 auto;
+    background-color: #ff0000;
+    color: white;
+    border-radius: 35px;
+    padding: .35rem 1rem;
+}
+#drinks h2 {
+    font-size: 1.3rem;
 }

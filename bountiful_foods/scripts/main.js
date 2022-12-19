@@ -8,7 +8,8 @@ menuBtn.onclick = toggleMenu;
 //Last modified 
 const lastMdf = document.lastModified;
 document.querySelector(".lastMdf").textContent = `Last Modified: ${lastMdf}`
-
+//drinks stored locally
+document.querySelector("#drinks").innerHTML = `<h2>Total Number of Drinks Mixed: <span>${localStorage.getItem("mixesNum")}</span></h2>`;
 const weather = document.querySelector("div.weather");
 const url = 'https://api.openweathermap.org/data/2.5/forecast?lat=34.05223&lon=-118.24368&units=metric&appid=07c38bb26d244f2a9856dcddf725921d';
 
@@ -64,7 +65,6 @@ function capitalize(string) {
     const desc = capitalize(week[index].weather[0].description);
     console.log(dt_txt.getSeconds().toString().padEnd(2, "0"));
 
-    //p.innerHTML = `The current temperature in Fairbanks, Alaska is: <strong>${weatherData.main.temp.toFixed(i)}</strong> &deg;F`;    temperature.innerHTML = weatherData.main.temp.toFixed(i);
     day.setAttribute("class", "day");
     img.setAttribute("src", src);
     img.setAttribute("alt", desc);
@@ -152,7 +152,6 @@ fetch(dataUrl)
   });
 
 const submitBtn = document.querySelector("#submitBtn");
-/* Assigning the submitForm function to the onclick event of the submit button. */
 submitBtn.onclick = mixFruits;
 
 document.getElementById("fruitsMixed").style.visibility = "hidden";
