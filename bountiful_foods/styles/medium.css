@@ -3,6 +3,19 @@
         width: 80%;
         margin: 2rem auto;
     }
+    .hero h2 {
+        display: block;
+        right: 5rem;
+        top: 4rem;
+        font-size: 1.75rem;
+    }
+    .hero a {
+        font-size: 1.3rem;
+        right: 10.5rem;
+        bottom: 1.75rem;
+        padding: .5rem 1rem;
+        border-radius: 50px;
+    }
     header .presentation {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -113,5 +126,11 @@
     .map {
         margin: 2rem auto;
         max-width: 80%;
+    }
+    footer {
+        font-size: 1rem;
+    }
+    footer img {
+        width: 100px;
     }
 }

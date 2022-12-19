@@ -16,17 +16,25 @@ async function apiFetch() {
         const data = await response.json();
         console.log(data); // this is for testing the call
         const week = [];
-        for (let i = 0; i < data.list.length; i++) {
+        let week_index = 0;
+        const list = data.list;
+        for (let i = 0; i < list.length; i++) {
           if (0 < i) {
-            week.push(data.list[i]);
-            if (data.list[i - 1].dt_txt.getDate() == data.list[i].dt_txt.getDate()) {
-              week.i = data.list[i];
-            } else {
-
+            let dt_txt_before = new Date(data.list[i-1].dt_txt);
+            let dt_txt = new Date(data.list[i].dt_txt);
+            if (dt_txt_before.getDate() != dt_txt.getDate()) {
+              week.push(list[i]);
+              week_index = week.length - 1;
+            } else if (dt_txt_before.getDate() == dt_txt.getDate()) {
+              week[week_index] = list[i];
             }
+          } else if (i == 0) {
+            week.push(list[i]);
           }
-          displayResults(data, i);
           }
+        for (let i = 0; i < week.length; i++) {
+          displayResults(week, i)
+        }
       } else {
           throw Error(await response.text());
       }
@@ -39,18 +47,18 @@ apiFetch();
 function capitalize(string) {
     return `${string.charAt(0).toUpperCase()}${string.slice(1)}`;
 }
-  function displayResults(weatherData, index) {
-    const dt_txt = new Date(weatherData.list[index].dt_txt);
+  function displayResults(week, index) {
+    const dt_txt = new Date(week[index].dt_txt);
     const weather = document.querySelector("div.weather");
     const day = document.createElement("div");
     const weekday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
-    const date = document.createElement("h3");
-    const temperature = document.createElement("h3");
-    const condition = document.createElement("h3");
-    const humidity = document.createElement("h3");
+    const date = document.createElement("p");
+    const temperature = document.createElement("p");
+    const condition = document.createElement("p");
+    const humidity = document.createElement("p");
     const img = document.createElement("img");
-    const src = `https://openweathermap.org/img/w/${weatherData.list[index].weather[0].icon}.png`;
-    const desc = capitalize(weatherData.list[index].weather[0].description);
+    const src = `https://openweathermap.org/img/w/${week[index].weather[0].icon}.png`;
+    const desc = capitalize(week[index].weather[0].description);
     console.log(dt_txt.getSeconds().toString().padEnd(2, "0"));
 
     //p.innerHTML = `The current temperature in Fairbanks, Alaska is: <strong>${weatherData.main.temp.toFixed(i)}</strong> &deg;F`;    temperature.innerHTML = weatherData.main.temp.toFixed(i);
@@ -58,9 +66,9 @@ function capitalize(string) {
     img.setAttribute("src", src);
     img.setAttribute("alt", desc);
     date.textContent = `${weekday[dt_txt.getDay()]} ${dt_txt.getDate()} at ${dt_txt.getHours().toString().padEnd(2, "0")}:${dt_txt.getMinutes().toString().padStart(2, "0")}:${dt_txt.getSeconds().toString().padStart(2, "0")}`;
-    temperature.textContent = `${weatherData.list[index].main.temp.toFixed(0)} °C`;
-    condition.textContent = capitalize(weatherData.list[index].weather[0].description);
-    humidity.textContent = `${weatherData.list[index].main.humidity}% humid`;
+    temperature.textContent = `${week[index].main.temp.toFixed(0)} °C`;
+    condition.textContent = capitalize(week[index].weather[0].description);
+    humidity.textContent = `${week[index].main.humidity}% humid`;
     day.appendChild(date);
     day.appendChild(temperature);
     day.appendChild(img);
@@ -230,4 +238,4 @@ console.log(localStorage.getItem("mixesNum"));
 }
 
 const lastMdf = document.lastModified;
-document.querySelector(".lastMdf").textContent = `Last Modified: ${lastMdf}`;
+document.querySelector(".lastMdf").textContent = `Last Modified: ${lastMdf}`
