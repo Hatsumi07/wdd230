@@ -91,5 +91,9 @@
         </div>
     </footer>
     <script src="scripts/main.js"></script>
+    <script>
+        document.querySelector("#drinks").innerHTML = `<h2>Total Number of Drinks Mixed: <span>${localStorage.getItem("mixesNum")}</span></h2>`;
+        const weather = document.querySelector("div.weather");
+    </script>
 </body>
 </html>

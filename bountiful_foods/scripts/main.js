@@ -9,8 +9,6 @@ menuBtn.onclick = toggleMenu;
 const lastMdf = document.lastModified;
 document.querySelector(".lastMdf").textContent = `Last Modified: ${lastMdf}`
 //drinks stored locally
-document.querySelector("#drinks").innerHTML = `<h2>Total Number of Drinks Mixed: <span>${localStorage.getItem("mixesNum")}</span></h2>`;
-const weather = document.querySelector("div.weather");
 const url = 'https://api.openweathermap.org/data/2.5/forecast?lat=34.05223&lon=-118.24368&units=metric&appid=07c38bb26d244f2a9856dcddf725921d';
 
 async function apiFetch() {
