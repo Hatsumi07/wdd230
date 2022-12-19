@@ -92,8 +92,12 @@
     </footer>
     <script src="scripts/main.js"></script>
     <script>
-        document.querySelector("#drinks").innerHTML = `<h2>Total Number of Drinks Mixed: <span>${localStorage.getItem("mixesNum")}</span></h2>`;
+        if (localStorage.getItem('mixesNum')) {
+            document.querySelector("#drinks").innerHTML = `<h2>Total Number of Drinks Mixed: <span>${localStorage.getItem("mixesNum")}</span></h2>`;
         const weather = document.querySelector("div.weather");
+        } else {
+            document.querySelector("#drinks").innerHTML = `<h2>You haven't mixed any drink yet.</h2>`;
+        }
     </script>
 </body>
 </html>
